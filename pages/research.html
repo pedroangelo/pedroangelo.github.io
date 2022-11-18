@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- import jQuery source files -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- import CSS files -->
+<link rel="stylesheet" href="/css/files.css">
+
+<!-- import Javascript files -->
+<!-- <script src="[filename].js"></script> -->
+
+<!--
+To implement toggle between light and dark:
+- import javascript
+- add class "light-theme" to body
+- add button to toggle <button id="change" onclick="myFunction()">Dark Mode Off</button><
+- add javascript file import <script src="/javascript/toggleTheme.js"></script>
+-->
+
 <title>Pedro Ângelo | Research</title>
 </head>
+
 <body>
 
-<p><a href="/index.html">Home</a> | <a href="/pages/research.html">Research</a> | <a href="/pages/teaching.html">Teaching</a> | <a href="/pages/curriculum-vitae.html">Curriculum Vitae</a></p>
-<hr></hr>
+<header>
+<a href="/index.html" id="header-logo">Pedro Ângelo</a>
 
-<h1>Research</h1>
+<nav class="navbar">
+<a href="/pages/research.html" class="active">Research</a>
+<a href="/pages/teaching.html">Teaching</a>
+<a href="/pages/curriculum-vitae.html">Curriculum Vitae</a>
+</nav>
+
+<nav class="social-icons">
+<a href="https://github.com/pedroangelo/" target="_blank" class="github"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" /></a>
+</nav>
+</header>
+
+<main>
 
 <h3>Research visits</h3>
 
@@ -110,5 +139,6 @@ Best Presentation Award (ex aequo) at the Doctoral Symposium, 3rd World Congress
 </li>
 </ul>
 
+</main>
 </body>
 </html>
