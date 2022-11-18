@@ -1,16 +1,15 @@
 @import "/css/colours.css";
 
-
-
 body {
+  /* remove default margin on webpages */
   margin: 0px;
-  color: var(--navy);
   background-color: var(--cream);
+
+  color: var(--navy);
 }
 
-/* Style the header with a grey background and some padding */
 header {
-  /* sticks to the top when scrolling, but doesn't overlap other content */
+  /* stick header to the top when scrolling, but doesn't overlap other content */
   position: sticky;
   top: 0;
   overflow: hidden;
@@ -20,55 +19,50 @@ header {
   border-bottom: 2px solid var(--navy);
 }
 
-/* Style the header links */
+/* inner header, placing contents within 80% of the width of the page */
+div.inner-header {
+  margin: 0 10% 0 10%;
+}
+
+/* style the header links */
 header a {
   float: left;
   color: var(--navy);
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px;
   line-height: 25px;
-  /*border-radius: 4px;*/
-  border-bottom: 3px solid var(--cream);
-  margin: 0px 5px;
 }
 
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 #header-logo {
   font-size: 25px;
   font-weight: bold;
-  margin: 0px 0px 0px 100px;
 }
 
-/* Float the link section to the right */
+/* navigation bar to the right of logo */
 nav.navbar {
-  float: left;
-  margin: 0px 0px 0px 100px;
+  /* float bar to the right */
+  float: right;
 }
 
-/* Change the background color on mouse-over */
+nav.navbar a {
+  font-size: 18px;
+  margin: 0px 10px;
+  /* needed to fill size, so it doesn't increase when hovering */
+  border-bottom: 3px solid var(--cream);
+}
+
 /* header a:not(#header-logo):not(.active):hover */
 
+/* change style when hovering, if it's not the header-logo */
 header .navbar a:not(#header-logo):hover {
   color: var(--orange);
   border-bottom: 3px solid var(--orange);
 }
 
-/* Style the active/current link*/
+/* change style of active */
 header .navbar a.active {
   color: var(--orange);
-}
-
-nav.social-icons {
-  float: right;
-  margin: 0px 50px 0px 0px;
-  height: 50px;
-  width: 50px;
-}
-nav.social-icons a img {
-  height: 30px;
-  width: 30px;
 }
 
 main {
