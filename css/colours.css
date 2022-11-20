@@ -1,5 +1,7 @@
 :root {
-    --cream: #FAF9F0;
+    /* colour palette */
+    --navy: #232533;
+    --cream: #F2E7D5;
     --orange: #FF5722;
-    --navy: #121435;
+    --transparent: rgba(0, 0, 0, 0.0);
 }
