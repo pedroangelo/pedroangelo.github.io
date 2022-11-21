@@ -49,8 +49,10 @@ header .dropdown {
   display: none;
   /* place just below navbar link*/
   position: absolute;
-  top: 52px;
+  top: 49px;
   background-color: var(--navy);
+  /* extend border of navbar links, to encompass top of .dropdown-content */
+  border-top: 3px solid var(--orange);
 }
 
 /* Show the dropdown menu on hover */
