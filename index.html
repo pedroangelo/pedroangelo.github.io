@@ -8,12 +8,12 @@
 <link rel="stylesheet" href="/css/files.css">
 
 <!-- import Javascript files -->
-<script src="/javascript/toggle-dark-mode.js"></script>
+<script src="/javascript/toggle-theme.js"></script>
 
 <title>Pedro Ângelo</title>
 </head>
 
-<body class="light-mode">
+<body onload="javascript:initializeTheme()" class="light-theme">
 
 <header>
 <div class="inner-header">
@@ -30,7 +30,7 @@
 <a href="/pages/research">research</a>
 <a href="/pages/teaching">teaching</a>
 <a href="/pages/contact">contact</a>
-<button id="toggle-dark-mode" onclick="toggleDarkMode()">dark</a>
+<button id="toggle-theme" onclick="toggleTheme()">light</a>
 </nav>
 </div>
 </header>

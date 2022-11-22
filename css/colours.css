@@ -1,4 +1,4 @@
-body.light-mode {
+body.light-theme {
     /* colour palette */
     /* navy */
     --primary-colour: #232533;
@@ -10,7 +10,7 @@ body.light-mode {
     --transparent-colour: rgba(255, 255, 255, 0.0);
 }
 
-body.dark-mode {
+body.dark-theme {
     /* colour palette */
     /* cream */
     --primary-colour: #F2E7D5;

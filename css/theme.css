@@ -134,7 +134,7 @@ header .navbar .dropdown:hover > a {
 /* DARK MODE TOGGLE */
 
 /* toggle button to change between light and dark mode */
-header .inner-header .navbar button#toggle-dark-mode {
+header .inner-header .navbar button#toggle-theme {
   /* keep orientation with the navbar links*/
   float: left;
   /* change pointer */
