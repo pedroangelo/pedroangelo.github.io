@@ -8,20 +8,12 @@
 <link rel="stylesheet" href="/css/files.css">
 
 <!-- import Javascript files -->
-<!-- <script src="[filename].js"></script> -->
-
-<!--
-To implement toggle between light and dark:
-- import javascript
-- add class "light-theme" to body
-- add button to toggle <button id="change" onclick="myFunction()">Dark Mode Off</button><
-- add javascript file import <script src="/javascript/toggleTheme.js"></script>
--->
+<script src="/javascript/toggle-dark-mode.js"></script>
 
 <title>Contact</title>
 </head>
 
-<body>
+<body class="light-mode">
 
 <header>
 <div class="inner-header">
@@ -38,6 +30,7 @@ To implement toggle between light and dark:
 <a href="/pages/research">research</a>
 <a href="/pages/teaching">teaching</a>
 <a href="/pages/contact" class="active">contact</a>
+<a id="change" onclick="toggleDarkMode()">dark mode</a>
 </nav>
 </div>
 </header>

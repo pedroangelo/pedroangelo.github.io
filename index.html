@@ -8,20 +8,12 @@
 <link rel="stylesheet" href="/css/files.css">
 
 <!-- import Javascript files -->
-<!-- <script src="[filename].js"></script> -->
-
-<!--
-To implement toggle between light and dark:
-- import javascript
-- add class "light-theme" to body
-- add button to toggle <button id="change" onclick="myFunction()">Dark Mode Off</button><
-- add javascript file import <script src="/javascript/toggleTheme.js"></script>
--->
+<script src="/javascript/toggle-dark-mode.js"></script>
 
 <title>Pedro Ângelo</title>
 </head>
 
-<body>
+<body class="light-mode">
 
 <header>
 <div class="inner-header">
@@ -38,6 +30,7 @@ To implement toggle between light and dark:
 <a href="/pages/research">research</a>
 <a href="/pages/teaching">teaching</a>
 <a href="/pages/contact">contact</a>
+<a id="change" onclick="toggleDarkMode()">dark mode</a>
 </nav>
 </div>
 </header>
@@ -53,7 +46,7 @@ I'm a PhD student in Computer Science at the Faculdade de Ciências da Universid
 Having started in September of 2018, and planning to finishing on July 2023, my PhD topic is about program verification using gradual typing and intersection types.
 </p>
 <p>
-I started my joint bachelor and master in Network and Information Systems Engineering in 2012 and finished in 2017, also from Faculdade de Ciência da Universidade do Porto.
+I was awarded my joint bachelor and master degree in Network and Information Systems Engineering by Faculdade de Ciência da Universidade do Porto in 2017, having started in 2012.
 </p>
 <h3>Research Interests</h3>
 
