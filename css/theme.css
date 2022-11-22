@@ -85,7 +85,7 @@ header #header-logo {
 
 /* navbar links */
 header .navbar > a,
-header .navbar .dropdown > a{
+header .navbar .dropdown > a {
   /* float left so links group side by side starting on the left */
   float: left;
   font-size: 18px;
@@ -129,6 +129,28 @@ header .navbar .dropdown:hover > a {
 /* dropdown content links on hover */
 .dropdown-content > a:hover {
   color: var(--highlight-colour)
+}
+
+/* DARK MODE TOGGLE */
+
+/* toggle button to change between light and dark mode */
+header .inner-header .navbar button#toggle-dark-mode {
+  /* keep orientation with the navbar links*/
+  float: left;
+  /* change pointer */
+  cursor: pointer;
+  text-align: center;
+  padding: 12px 12px;
+  /* remove underline usual in links */
+  text-decoration: none;
+  line-height: 25px;
+  font-size: 18px;
+  /* remove standard button border */
+  border: 0px;
+  border-bottom: 3px solid var(--background-colour);
+  /* opposite colours */
+  background-color: var(--background-colour);
+  color: var(--primary-colour);
 }
 
 main {
