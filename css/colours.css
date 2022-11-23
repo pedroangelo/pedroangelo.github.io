@@ -6,15 +6,3 @@
     /* transparent */
     --transparent: rgba(255, 255, 255, 0.0);
 }
-
-body.light-theme {
-    --primary-colour: var(--navy);
-    --background-colour: var(--cream);
-    --highlight-colour: var(--orange);
-}
-
-body.dark-theme {
-    --primary-colour: var(--cream);
-    --background-colour: var(--navy);
-    --highlight-colour: var(--orange);
-}

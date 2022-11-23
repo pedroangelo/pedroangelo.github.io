@@ -1,0 +1,168 @@
+@import "/css/theme.css";
+
+body {
+  margin: 0px;
+  background-color: var(--background-colour);
+  /* font Arial, fall back on Helvetica */
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary-colour);
+}
+
+/* HEADER */
+
+/* header element, styled as the top bar */
+header {
+  /* sticks to the top when scrolling, without overlapping other content */
+  position: sticky;
+  /* place on top */
+  top: 0;
+  background-color: var(--primary-colour);
+  /* box shadow for header */
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
+  /* place on top of content*/
+  z-index: 1;
+}
+
+/* inner header div, where home button / title and navbar are */
+header .inner-header {
+  /* place contents within 76% of the width of the page */
+  margin: 0 15% 0 12%;
+  /* needed in this element, so dropdown menu can appear outside header */
+  overflow: hidden;
+}
+
+/* navigation bar to the right of logo */
+header .inner-header nav.navbar {
+  /* float bar to the right */
+  float: right;
+}
+
+/* The dropdown container, containing the navbar link as well as all sublinks */
+header .dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown content, containing sublinks */
+.navbar .dropdown .dropdown-content {
+  /* hidden by default, until hovered */
+  display: none;
+  /* place just below navbar link*/
+  position: absolute;
+  top: 49px;
+  background-color: var(--primary-colour);
+  /* extend border of navbar links, to encompass top of .dropdown-content */
+  border-top: 3px solid var(--highlight-colour);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* HYPERLINKS */
+
+/* all header links */
+/* header logo: #header-logo */
+/* navbar links: .navbar > a and .navbar .dropdown > a */
+/* dropdown content links: .dropdown-contents > a */
+header div.inner-header a {
+  color: var(--background-colour);
+  text-align: center;
+  padding: 12px 12px;
+  /* remove underline usual in links */
+  text-decoration: none;
+  line-height: 25px;
+}
+
+/* header logo links */
+header #header-logo {
+  font-size: 25px;
+  font-weight: bold;
+  /* float left so links group side by side starting on the left */
+  float: left;
+}
+
+/* navbar links */
+header .navbar > a,
+header .navbar .dropdown > a {
+  /* float left so links group side by side starting on the left */
+  float: left;
+  font-size: 18px;
+  /* add a small space separating links */
+  /* margin: 0px 0px; */
+  /* needed to fill size, so it doesn't increase when hovering */
+  border-bottom: 3px solid var(--background-colour);
+}
+
+/* navbar links on active */
+header .navbar > a.active,
+header .navbar .dropdown > a.active {
+  color: var(--highlight-colour);
+  border-bottom: 3px solid var(--highlight-colour);
+}
+
+/* navbar links on hover */
+header .navbar > a:hover,
+header .navbar .dropdown > a:hover {
+  color: var(--highlight-colour);
+  border-bottom: 3px solid var(--highlight-colour);
+}
+
+/* navbar links on hover */
+header .navbar .dropdown:hover > a {
+  color: var(--highlight-colour);
+  border-bottom: 3px solid var(--highlight-colour);
+}
+
+/* dropdown content links */
+.dropdown-content > a {
+  /* arrange items vertically */
+  display: block;
+}
+
+/* dropdown content links on active */
+.dropdown-content > a.active {
+  color: var(--highlight-colour);
+}
+
+/* dropdown content links on hover */
+.dropdown-content > a:hover {
+  color: var(--highlight-colour)
+}
+
+/* DARK MODE TOGGLE */
+
+/* toggle button to change between light and dark mode */
+header .inner-header .navbar button#toggle-theme {
+  /* keep orientation with the navbar links*/
+  float: left;
+  /* change pointer */
+  cursor: pointer;
+  text-align: center;
+  padding: 12px 12px;
+  /* remove underline usual in links */
+  text-decoration: none;
+  line-height: 25px;
+  font-size: 18px;
+  /* remove standard button border */
+  border: 0px;
+  border-bottom: 3px solid var(--background-colour);
+  /* opposite colours */
+  background-color: var(--background-colour);
+  color: var(--primary-colour);
+}
+
+main {
+  margin: 40px;
+}
+
+/* link yet to be visited */
+main a:link {
+  color: var(--primary-colour);
+}
+
+/* visited link */
+main a:visited {
+  color: var(--highlight-colour);
+}
