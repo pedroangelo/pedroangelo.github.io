@@ -1,23 +1,20 @@
-body.light-theme {
+:root {
     /* colour palette */
-    /* navy */
-    --primary-colour: #232533;
-    /* cream */
-    --background-colour: #F2E7D5;
-    /* orange */
-    --highlight-colour: #FF5722;
+    --navy: #232533;
+    --cream: #F2E7D5;
+    --orange: #FF5722;
     /* transparent */
-    --transparent-colour: rgba(255, 255, 255, 0.0);
+    --transparent: rgba(255, 255, 255, 0.0);
+}
+
+body.light-theme {
+    --primary-colour: var(--navy);
+    --background-colour: var(--cream);
+    --highlight-colour: var(--orange);
 }
 
 body.dark-theme {
-    /* colour palette */
-    /* cream */
-    --primary-colour: #F2E7D5;
-    /* navy */
-    --background-colour: #232533;
-    /* orange */
-    --highlight-colour: #FF5722;
-    /* transparent */
-    --transparent-colour: rgba(255, 255, 255, 0.0);
+    --primary-colour: var(--cream);
+    --background-colour: var(--navy);
+    --highlight-colour: var(--orange);
 }
