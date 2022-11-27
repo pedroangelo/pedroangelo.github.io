@@ -131,10 +131,16 @@ header .navbar .dropdown:hover > a {
   color: var(--highlight-colour)
 }
 
-/* DARK MODE TOGGLE */
+/* THEME PICKER */
+
+/* theme picker container */
+header div#theme-picker {
+    float: left;
+    overflow: hidden;
+}
 
 /* toggle button to change between light and dark mode */
-header .inner-header .navbar button#toggle-theme {
+header div#theme-picker button.toggle-theme {
   /* keep orientation with the navbar links*/
   float: left;
   /* change pointer */
@@ -148,6 +154,39 @@ header .inner-header .navbar button#toggle-theme {
   /* remove standard button border */
   border: 0px;
   border-bottom: 3px solid var(--background-colour);
+  /* opposite colours */
+  background-color: var(--background-colour);
+  color: var(--primary-colour);
+}
+
+/* theme options list, containing individual theme pickers */
+header div#theme-picker div.theme-options {
+  /* hidden by default, until hovered */
+  display: none;
+  /* place just below navbar link*/
+  position: absolute;
+  top: 52px;
+  background-color: var(--background-colour);
+}
+
+/* show theme options on hover */
+header div#theme-picker:hover div.theme-options {
+  display: block;
+}
+
+header div#theme-picker div.theme-options button.pick-theme {
+  /* keep orientation with the navbar links*/
+  display: block;
+  /* change pointer */
+  cursor: pointer;
+  text-align: center;
+  padding: 12px 12px;
+  /* remove underline usual in links */
+  text-decoration: none;
+  line-height: 25px;
+  font-size: 18px;
+  /* remove standard button border */
+  border: 0px;
   /* opposite colours */
   background-color: var(--background-colour);
   color: var(--primary-colour);
