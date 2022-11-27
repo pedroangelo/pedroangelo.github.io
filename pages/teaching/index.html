@@ -30,7 +30,18 @@
 <a href="/pages/research">research</a>
 <a href="/pages/teaching" class="active">teaching</a>
 <a href="/pages/contact">contact</a>
-<button id="toggle-theme" onclick="toggleTheme()">light</button>
+
+<div id="theme-picker">
+<button class="toggle-theme" onclick="toggleTheme()">theme</button>
+
+<div class="theme-options">
+<button class="pick-theme" onclick="switchToTheme('default')">default</button>
+<button class="pick-theme" onclick="switchToTheme('light')">light</button>
+<button class="pick-theme" onclick="switchToTheme('dark')">dark</button>
+</div>
+
+</div>
+
 </nav>
 </div>
 </header>
