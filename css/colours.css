@@ -1,8 +1,18 @@
 :root {
     /* colour palette */
-    --navy: #232533;
-    --cream: #F2E7D5;
-    --orange: #FF5722;
-    /* transparent */
+    
+    /* black and whites */
+    --black: #000000;
+    --white: #FFFFFF;
     --transparent: rgba(255, 255, 255, 0.0);
+    
+    /* gray */
+    --dark-gray: #1B1B1B;
+    --gray: #404040;
+    
+    /* colourful */
+    --cream: #F2E7D5;
+    --light-gray: #F9F9FB;
+    --navy: #232533;
+    --orange: #FF5722;
 }
