@@ -2,10 +2,10 @@
 
 body {
   margin: 0px;
-  background-color: var(--background-colour);
+  background-color: var(--background-color);
   /* font Arial, fall back on Helvetica */
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--primary-colour);
+  color: var(--text-color);
 }
 
 /* HEADER */
@@ -16,9 +16,9 @@ header {
   position: sticky;
   /* place on top */
   top: 0;
-  background-color: var(--primary-colour);
-  /* box shadow for header */
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
+  background-color: var(--background-color);
+  /* header divider */
+  border-bottom: 1px solid var(--highlight-color);
   /* place on top of content*/
   z-index: 1;
 }
@@ -50,9 +50,10 @@ header .dropdown {
   /* place just below navbar link*/
   position: absolute;
   top: 49px;
-  background-color: var(--primary-colour);
+  background-color: var(--text-color);
+  color: var(--background-color);
   /* extend border of navbar links, to encompass top of .dropdown-content */
-  border-top: 3px solid var(--highlight-colour);
+  border-top: 3px solid var(--text-color);
 }
 
 /* Show the dropdown menu on hover */
@@ -67,7 +68,6 @@ header .dropdown {
 /* navbar links: .navbar > a and .navbar .dropdown > a */
 /* dropdown content links: .dropdown-contents > a */
 header div.inner-header a {
-  color: var(--background-colour);
   text-align: center;
   padding: 12px 12px;
   /* remove underline usual in links */
@@ -77,6 +77,7 @@ header div.inner-header a {
 
 /* header logo links */
 header #header-logo {
+  color: var(--text-color);
   font-size: 25px;
   font-weight: bold;
   /* float left so links group side by side starting on the left */
@@ -88,47 +89,53 @@ header .navbar > a,
 header .navbar .dropdown > a {
   /* float left so links group side by side starting on the left */
   float: left;
+  color: var(--text-color);
   font-size: 18px;
   /* add a small space separating links */
   /* margin: 0px 0px; */
   /* needed to fill size, so it doesn't increase when hovering */
-  border-bottom: 3px solid var(--background-colour);
+  border-bottom: 3px solid var(--background-color);
 }
 
 /* navbar links on active */
 header .navbar > a.active,
 header .navbar .dropdown > a.active {
-  color: var(--highlight-colour);
-  border-bottom: 3px solid var(--highlight-colour);
+  /* color: var(--text-color); */
+  border-bottom: 3px solid var(--text-color);
 }
 
 /* navbar links on hover */
 header .navbar > a:hover,
 header .navbar .dropdown > a:hover {
-  color: var(--highlight-colour);
-  border-bottom: 3px solid var(--highlight-colour);
+  color: var(--background-color);
+  background-color: var(--text-color);
+  border-bottom: 3px solid var(--text-color);
 }
 
 /* navbar links on hover */
 header .navbar .dropdown:hover > a {
-  color: var(--highlight-colour);
-  border-bottom: 3px solid var(--highlight-colour);
+  color: var(--background-color);
+  background-color: var(--text-color);
+  border-bottom: 3px solid var(--text-color);
 }
 
 /* dropdown content links */
 .dropdown-content > a {
   /* arrange items vertically */
   display: block;
+  color: var(--background-color);
 }
 
 /* dropdown content links on active */
 .dropdown-content > a.active {
-  color: var(--highlight-colour);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 /* dropdown content links on hover */
 .dropdown-content > a:hover {
-  color: var(--highlight-colour)
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 /* THEME PICKER */
@@ -153,10 +160,10 @@ header div#theme-picker button.toggle-theme {
   font-size: 18px;
   /* remove standard button border */
   border: 0px;
-  border-bottom: 3px solid var(--background-colour);
-  /* opposite colours */
-  background-color: var(--background-colour);
-  color: var(--primary-colour);
+  border-bottom: 3px solid var(--background-color);
+  /* opposite colors */
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* theme options list, containing individual theme pickers */
@@ -166,7 +173,7 @@ header div#theme-picker div.theme-options {
   /* place just below navbar link*/
   position: absolute;
   top: 52px;
-  background-color: var(--background-colour);
+  background-color: var(--text-color);
 }
 
 /* show theme options on hover */
@@ -187,9 +194,9 @@ header div#theme-picker div.theme-options button.pick-theme {
   font-size: 18px;
   /* remove standard button border */
   border: 0px;
-  /* opposite colours */
-  background-color: var(--background-colour);
-  color: var(--primary-colour);
+  /* opposite colors */
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
 
 main {
@@ -198,10 +205,10 @@ main {
 
 /* link yet to be visited */
 main a:link {
-  color: var(--primary-colour);
+  color: var(--highlight-color);
 }
 
 /* visited link */
 main a:visited {
-  color: var(--highlight-colour);
+  color: var(--text-color);
 }

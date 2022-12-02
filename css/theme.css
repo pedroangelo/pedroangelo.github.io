@@ -1,41 +1,69 @@
 @import "/css/colours.css";
 
 body.default-theme, body.light-theme {
-    --primary-colour: var(--navy);
-    --background-colour: var(--cream);
-    --highlight-colour: var(--orange);
+    /* general colors */
+    --background-color: var(--white);
+    --text-color: var(--black);
+    --highlight-color: var(--light-gray);
+    /* specific colors */
+    /* --header-background-colour: var(--dark-gray); */
 }
 
 body.dark-theme {
-    --primary-colour: var(--cream);
-    --background-colour: var(--navy);
-    --highlight-colour: var(--orange);
+    /* general colors */
+    --background-color: var(--dark-gray);
+    --text-color: var(--white);
+    --highlight-color: var(--light-gray);
+    /* specific colors */
+    /* --header-background-colour: var(--dark-gray); */
 }
+
 
 @media (prefers-color-scheme: light) {
 body.default-theme, body.light-theme {
-    --primary-colour: var(--navy);
-    --background-colour: var(--cream);
-    --highlight-colour: var(--orange);
+    /* general colors */
+    --background-color: var(--white);
+    --text-color: var(--black);
+    --highlight-color: var(--light-gray);
+    /* specific colors */
+    /* --header-background-colour: var(--dark-gray); */ 
 }
 
 body.dark-theme {
-    --primary-colour: var(--cream);
-    --background-colour: var(--navy);
-    --highlight-colour: var(--orange);
+    /* general colors */
+    --background-color: var(--dark-gray);
+    --text-color: var(--white);
+    --highlight-color: var(--light-gray);
+    /* specific colors */
+    /* --header-background-colour: var(--dark-gray); */
 }
 }
 
 @media (prefers-color-scheme: dark) {
 body.light-theme {
-    --primary-colour: var(--navy);
-    --background-colour: var(--cream);
-    --highlight-colour: var(--orange);
+    /* general colors */
+    --background-color: var(--white);
+    --text-color: var(--black);
+    --highlight-color: var(--light-gray);
+    /* specific colors */
+    /* --header-background-colour: var(--dark-gray); */
 }
 
 body.default-theme, body.dark-theme {
+    /* general colors */
+    --background-color: var(--dark-gray);
+    --text-color: var(--white);
+    --highlight-color: var(--light-gray);
+    /* specific colors */
+    /* --header-background-colour: var(--dark-gray); */
+}
+}
+
+/* OTHER THEMES
+
+body.darkblue-theme {
     --primary-colour: var(--cream);
     --background-colour: var(--navy);
     --highlight-colour: var(--orange);
 }
-}
+*/
