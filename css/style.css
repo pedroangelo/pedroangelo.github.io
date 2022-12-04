@@ -1,4 +1,5 @@
 @import "/css/theme.css";
+@import "/css/z-index.css";
 
 body {
   margin: 0px;
@@ -20,7 +21,7 @@ header {
   /* header divider */
   border-bottom: 1px solid var(--highlight-color);
   /* place on top of content*/
-  z-index: 1;
+  z-index: var(--z-index-header);
 }
 
 /* inner header div, where home button / title and navbar are */
@@ -182,19 +183,14 @@ header div#theme-picker:hover div.theme-options {
 }
 
 header div#theme-picker div.theme-options button.pick-theme {
-  /* keep orientation with the navbar links*/
-  display: block;
-  /* change pointer */
-  cursor: pointer;
+  display: block; /* keep orientation with the navbar links*/
+  cursor: pointer; /* change pointer */
   text-align: center;
   padding: 12px 12px;
-  /* remove underline usual in links */
-  text-decoration: none;
+  text-decoration: none; /* remove underline usual in links */
   line-height: 25px;
   font-size: 18px;
-  /* remove standard button border */
-  border: 0px;
-  /* opposite colors */
+  border: 0px; /* remove standard button border */
   background-color: var(--text-color);
   color: var(--background-color);
 }
@@ -211,4 +207,44 @@ main a:link {
 /* visited link */
 main a:visited {
   color: var(--text-color);
+}
+
+/* MODAL FOR .BIB AND ABSTRACT */
+
+/* modal background */
+.modal {
+    display: none; /* hidden by default */
+    position: fixed; /* stay in place */
+    z-index: var(--z-index-modal); /* sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* full width */
+    height: 100%; /* full height */
+    overflow: auto; /* enable scroll if needed */
+    background-color: var(--dark-transparent); /* Black w/ opacity */
+}
+
+/* modal content box */
+.modal-content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid var(--highlight-color);
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: var(--text-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--highlight-color);
+    text-decoration: none;
+    cursor: pointer;
 }

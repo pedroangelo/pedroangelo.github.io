@@ -9,6 +9,7 @@
 
 <!-- import Javascript files -->
 <script src="/javascript/theme-picker.js"></script>
+<script src="/javascript/modal.js"></script>
 
 <title>Research</title>
 </head>
@@ -85,11 +86,19 @@ The application rule then constrains the intersection type resulting from duplic
 By treating intersections as sets, these constraints can be solved by solving a set unification problem, thus ensuring the types of the argument unify with the domain type of the function.
 Here we present a new type inference algorithm for rank-2 intersection types, which relies on set unification to solve equality constraints between intersections, and show it is both sound and complete.
 </p>
+
 <p>
 <a href="https://doi.org/10.1007/978-3-031-17715-6_29" target="_blank">DOI</a>
-<a href="/resources/papers/angelo2022type.bib" target="_blank">.bib</a>
 <a href="/resources/papers/angelo2022type.pdf" target="_blank">.pdf</a>
 <a href="/resources/papers/angelo2022type_complete.pdf" target="_blank">.pdf (extended)</a>
+
+<a onclick="showModal('angelo2022type')">.bib</a>
+<div class="modal angelo2022type" onclick="hideModal('angelo2022type')" onload="populateModal('angelo2022type')">
+<div class="modal-content">
+<span class="close" onclick="hideModal('angelo2022type')">&times;</span>
+<p onclick="";>Some text in the Modal..</p>
+</div>
+</div>
 </p>
 </li>
 
