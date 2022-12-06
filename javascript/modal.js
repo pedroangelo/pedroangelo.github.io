@@ -40,7 +40,7 @@ function initializeModals() {
     // for each paper reference:
     for (let i = 0; i < paperReferences.length; i++) {
 	// populate modal with information relative to paper reference
-	populateModal(paperReferences[i]);
+	// populateModal(paperReferences[i]);
 	// add event listener to close modal on click
 	window.addEventListener('click', function(event) { if (event.target == getModal(paperReferences[i])) { hideModal(paperReferences[i]); }});
     }
@@ -78,4 +78,22 @@ function hideAllModal() {
     for (let i = 0; i < modal.length; i++) {
 	modal[i].style.display = "none";
     }
+}
+
+// copy .bib file contents
+function copyBib(object) {
+    // get .bib file contents from .modal-content p element
+    let modalContent = object.closest('.modal-content').querySelector('p');;
+    // obtain inner html from element
+    let bibText = modalContent.innerHTML;
+    // copy to clipboard
+    navigator.clipboard.writeText(bibText);
+}
+
+// download .bib file
+function downloadBib(object) {
+    // get paper reference from object
+    let paperReference = object.closest(".paper-entry").classList[1];
+    // open window with object, causing browser to download it
+    window.open("/resources/papers/" + paperReference + ".bib");
 }

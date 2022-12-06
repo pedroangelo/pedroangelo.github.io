@@ -14,7 +14,7 @@
 <title>Research</title>
 </head>
 
-<body onload="javascript:initializeTheme()" class="default-theme">
+<body class="default-theme">
 
 <header>
 <div class="inner-header">
@@ -96,7 +96,23 @@ Here we present a new type inference algorithm for rank-2 intersection types, wh
 <div class="modal">
 <div class="modal-content">
 <span class="close" onclick="hideModalFromChild(this)">&times;</span>
-<p></p>
+<button onclick="copyBib(this)">copy</button>
+<button onclick="downloadBib(this)">download</button>
+<button onclick="hideModalFromChild(this)">close</button>
+<p>@InProceedings{angelo2022type,
+    author="{\^A}ngelo, Pedro and Florido, M{\'a}rio",
+    editor="Seidl, Helmut and Liu, Zhiming and Pasareanu, Corina S.",
+    title="Type Inference for Rank-2 Intersection Types Using Set Unification",
+    booktitle="Theoretical Aspects of Computing -- ICTAC 2022",
+    year="2022",
+    publisher="Springer International Publishing",
+    address="Cham",
+    pages="462--480",
+    abstract="Several type inference approaches for rank-2 idempotent and commutative intersection types have been presented in the literature. Type inference relies on two stages: type constraint generation and solving. Defining constraint generation rules is rather straightforward, with one exception. To infer the type of an application, several derivations of the argument are required, one for each instance of the domain type of the function. The types of these derivations are then constrained against the instances. Noting that these derivations are isomorphic, by renaming of type variables, they can be obtained via a duplication operation on a single derivation of the argument. The application rule then constrains the intersection type resulting from duplication against the domain type of the function, resulting in an equality constraint between intersections. By treating intersections as sets, these constraints can be solved by solving a set unification problem, thus ensuring the types of the argument unify with the domain type of the function. Here we present a new type inference algorithm for rank-2 intersection types, which relies on set unification to solve equality constraints between intersections, and show it is both sound and complete.",
+    isbn="978-3-031-17715-6",
+    url = {https://doi.org/10.1007/978-3-031-17715-6_29},
+    doi = {10.1007/978-3-031-17715-6_29}
+}</p>
 </div>
 </div>
 
@@ -127,7 +143,26 @@ We also prove several crucial properties of the type system, namely that types a
 <div class="modal">
 <div class="modal-content">
 <span class="close" onclick="hideModalFromChild(this)">&times;</span>
-<p></p>
+<button onclick="copyBib(this)">copy</button>
+<button onclick="downloadBib(this)">download</button>
+<button onclick="hideModalFromChild(this)">close</button>
+<p>@inproceedings{angelo2022typed,
+    author = {\^{A}ngelo, Pedro and Florido, M\'{a}rio},
+    title = {A Typed Lambda Calculus with Gradual Intersection Types},
+    year = {2022},
+    isbn = {9781450397032},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3551357.3551382},
+    doi = {10.1145/3551357.3551382},
+    abstract = {Intersection types have the power to type expressions which are all of many different types. Gradual types combine type checking at both compile-time and run-time. Here we combine these two approaches in a new typed calculus that harness both of their strengths. We incorporate these two contributions in a single typed calculus and define an operational semantics with type cast annotations. We also prove several crucial properties of the type system, namely that types are preserved during compilation and evaluation, and that the refined criteria for gradual typing holds.},
+    booktitle = {Proceedings of the 24th International Symposium on Principles and Practice of Declarative Programming},
+    articleno = {9},
+    numpages = {13},
+    keywords = {intersection types, gradual typing, typed lambda calculus},
+    location = {Tbilisi, Georgia},
+    series = {PPDP '22}
+}</p>
 </div>
 </div>
 
@@ -155,7 +190,22 @@ We present a type inference algorithm which builds the principal typing of a ter
 <div class="modal">
 <div class="modal-content">
 <span class="close" onclick="hideModalFromChild(this)">&times;</span>
-<p></p>
+<button onclick="copyBib(this)">copy</button>
+<button onclick="downloadBib(this)">download</button>
+<button onclick="hideModalFromChild(this)">close</button>
+<p>@InProceedings{angelo2020type,
+    author="{\^A}ngelo, Pedro and Florido, M{\'a}rio",
+    editor="Bowman, William J. and Garcia, Ronald",
+    title="Type Inference for Rank 2 Gradual Intersection Types",
+    booktitle="Trends in Functional Programming",
+    year="2020",
+    publisher="Springer International Publishing",
+    address="Cham",
+    pages="84--120",
+    abstract="In this paper, we extend a rank 2 intersection type system with gradual types. We then show that the problem of finding a principal typing for a lambda term, in a rank 2 gradual intersection type system is decidable. We present a type inference algorithm which builds the principal typing of a term through the generation of type constraints which are solved by a new extended unification algorithm constructing the most general unifier for rank 2 gradual intersection types.",
+    isbn="978-3-030-47147-7",
+    doi = {10.1007/978-3-030-47147-7_5}
+}</p>
 </div>
 </div>
 
@@ -178,6 +228,12 @@ Best Presentation Award (ex aequo) at the Doctoral Symposium, 3rd World Congress
 
 </main>
 <script>
+// initialization scripts
+
+// initialize theme
+initializeTheme();
+
+// initialize modals
 initializeModals();
 </script>
 </body>

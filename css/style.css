@@ -212,7 +212,7 @@ main a:visited {
 /* MODAL FOR .BIB AND ABSTRACT */
 
 /* modal background */
-.modal {
+div.modal {
     display: none; /* hidden by default */
     position: fixed; /* stay in place */
     z-index: var(--z-index-modal); /* sit on top */
@@ -225,26 +225,32 @@ main a:visited {
 }
 
 /* modal content box */
-.modal-content {
+div.modal div.modal-content {
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid var(--highlight-color);
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 200px;
+    overflow: scroll; /* hide text overflowing but allow scroll */
 }
 
 /* The Close Button */
-.close {
+div.modal div.modal-content .close {
     color: var(--text-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+div.modal div.modal-content .close:hover,
+div.modal div.modal-content .close:focus {
     color: var(--highlight-color);
     text-decoration: none;
     cursor: pointer;
+}
+
+div.modal div.modal-content p {
+    white-space: pre-wrap; /* wrap text to fit box, preserve whitespace */
 }
