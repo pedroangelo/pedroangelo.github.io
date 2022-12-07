@@ -6,6 +6,7 @@
 
 <!-- import CSS files -->
 <link rel="stylesheet" href="/css/files.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <!-- import Javascript files -->
 <script src="/javascript/theme-picker.js"></script>
@@ -32,12 +33,14 @@
 <a href="/pages/contact" class="active">contact</a>
 
 <div id="theme-picker">
-<button class="toggle-theme" onclick="toggleTheme()">theme</button>
+<button class="theme-button">
+<span class="theme-icon material-symbols-outlined">brightness_6</span>
+</button>
 
 <div class="theme-options">
-<button class="pick-theme" onclick="switchToTheme('default')">default</button>
-<button class="pick-theme" onclick="switchToTheme('light')">light</button>
-<button class="pick-theme" onclick="switchToTheme('dark')">dark</button>
+<button class="pick-theme pick-default" onclick="switchToTheme('default')"><span class="theme-icon material-symbols-outlined">brightness_6</span>default</button>
+<button class="pick-theme pick-light" onclick="switchToTheme('light')"><span class="theme-icon material-symbols-outlined">brightness_high</span>light</button>
+<button class="pick-theme pick-dark" onclick="switchToTheme('dark')"><span class="theme-icon material-symbols-outlined">brightness_4</span>dark</button>
 </div>
 
 </div>

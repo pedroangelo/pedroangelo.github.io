@@ -8,7 +8,7 @@ body.default-theme, body.light-theme {
     --highlight-color-p: var(--orange-900); /* primary highlight color */
     --highlight-color-s: var(--orange-800); /* secondady highlight color */
     --background-color-e1: var(--gray-100); /* background color elevation 1 */
-    --background-color-e2: var(--gray-200); /* background color elevation 1 */
+    --background-color-e2: var(--gray-200); /* background color elevation 2 */
 }
 
 body.dark-theme {
@@ -19,7 +19,8 @@ body.dark-theme {
     --highlight-color-p: var(--blue-300); /* primary highlight color */
     --highlight-color-s: var(--blue-200); /* secondady highlight color */
     --background-color-e1: var(--gray-900); /* background color elevation 1 */
-    --background-color-e2: var(--gray-800); /* background color elevation 1 */
+    --background-color-e2: var(--gray-800); /* background color elevation 2 */
+    --background-color-e3: var(--gray-700); /* background color elevation 3 */
 }
 
 /*
@@ -37,20 +38,28 @@ body.dark-theme {
 }
 }
 
+*/
+
 @media (prefers-color-scheme: dark) {
-body.light-theme {
+/*body.light-theme {
     --background-color: var(--white);
     --text-color: var(--black);
     --highlight-color: var(--light-gray);
-}
+}*/
 
 body.default-theme, body.dark-theme {
-    --background-color: var(--dark-gray);
-    --text-color: var(--white);
-    --highlight-color: var(--light-gray);
+    --background-color: var(--dark-gray); /* background color */
+    --text-color-he: var(--white-he); /* white high emphasis */
+    --text-color-me: var(--white-me); /* white medium emphasis */
+    --text-color-le: var(--white-le); /* white low emphasis */
+    --highlight-color-p: var(--blue-300); /* primary highlight color */
+    --highlight-color-s: var(--blue-200); /* secondady highlight color */
+    --background-color-e1: var(--gray-900); /* background color elevation 1 */
+    --background-color-e2: var(--gray-800); /* background color elevation 2 */
+    --background-color-e3: var(--gray-700); /* background color elevation 3 */
 }
 }
-*/
+
 
 /* OTHER THEMES
 
