@@ -1,63 +1,56 @@
 @import "/css/colours.css";
 
 body.default-theme, body.light-theme {
-    /* general colors */
-    --background-color: var(--white);
-    --text-color: var(--black);
-    --highlight-color: var(--light-gray);
-    /* specific colors */
-    /* --header-background-colour: var(--dark-gray); */
+    --background-color: var(--white); /* background color */
+    --text-color-he: var(--gray-900); /* white high emphasis */
+    --text-color-me: var(--gray-800); /* white medium emphasis */
+    --text-color-le: var(--gray-700); /* white low emphasis */
+    --highlight-color-p: var(--orange-900); /* primary highlight color */
+    --highlight-color-s: var(--orange-800); /* secondady highlight color */
+    --background-color-e1: var(--gray-100); /* background color elevation 1 */
+    --background-color-e2: var(--gray-200); /* background color elevation 1 */
 }
 
 body.dark-theme {
-    /* general colors */
-    --background-color: var(--dark-gray);
-    --text-color: var(--white);
-    --highlight-color: var(--light-gray);
-    /* specific colors */
-    /* --header-background-colour: var(--dark-gray); */
+    --background-color: var(--dark-gray); /* background color */
+    --text-color-he: var(--white-he); /* white high emphasis */
+    --text-color-me: var(--white-me); /* white medium emphasis */
+    --text-color-le: var(--white-le); /* white low emphasis */
+    --highlight-color-p: var(--blue-300); /* primary highlight color */
+    --highlight-color-s: var(--blue-200); /* secondady highlight color */
+    --background-color-e1: var(--gray-900); /* background color elevation 1 */
+    --background-color-e2: var(--gray-800); /* background color elevation 1 */
 }
 
-
+/*
 @media (prefers-color-scheme: light) {
 body.default-theme, body.light-theme {
-    /* general colors */
     --background-color: var(--white);
     --text-color: var(--black);
     --highlight-color: var(--light-gray);
-    /* specific colors */
-    /* --header-background-colour: var(--dark-gray); */ 
 }
 
 body.dark-theme {
-    /* general colors */
     --background-color: var(--dark-gray);
     --text-color: var(--white);
     --highlight-color: var(--light-gray);
-    /* specific colors */
-    /* --header-background-colour: var(--dark-gray); */
 }
 }
 
 @media (prefers-color-scheme: dark) {
 body.light-theme {
-    /* general colors */
     --background-color: var(--white);
     --text-color: var(--black);
     --highlight-color: var(--light-gray);
-    /* specific colors */
-    /* --header-background-colour: var(--dark-gray); */
 }
 
 body.default-theme, body.dark-theme {
-    /* general colors */
     --background-color: var(--dark-gray);
     --text-color: var(--white);
     --highlight-color: var(--light-gray);
-    /* specific colors */
-    /* --header-background-colour: var(--dark-gray); */
 }
 }
+*/
 
 /* OTHER THEMES
 

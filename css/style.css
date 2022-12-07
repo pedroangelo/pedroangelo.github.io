@@ -6,7 +6,7 @@ body {
   background-color: var(--background-color);
   /* font Arial, fall back on Helvetica */
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--text-color);
+  color: var(--text-color-he);
 }
 
 /* HEADER */
@@ -17,9 +17,8 @@ header {
   position: sticky;
   /* place on top */
   top: 0;
-  background-color: var(--background-color);
-  /* header divider */
-  border-bottom: 1px solid var(--highlight-color);
+  background-color: var(--background-color-e1);
+  /* border-bottom: 1px solid var(--background-color-e1); */
   /* place on top of content*/
   z-index: var(--z-index-header);
 }
@@ -50,16 +49,16 @@ header .dropdown {
   display: none;
   /* place just below navbar link*/
   position: absolute;
-  top: 49px;
-  background-color: var(--text-color);
-  color: var(--background-color);
+  top: 55px;
+  background-color: var(--background-color-e2);
+  color: var(--text-color-me);
   /* extend border of navbar links, to encompass top of .dropdown-content */
-  border-top: 3px solid var(--text-color);
+  /* border-top: 3px solid var(--highlight-color-p); */
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 /* HYPERLINKS */
@@ -78,7 +77,7 @@ header div.inner-header a {
 
 /* header logo links */
 header #header-logo {
-  color: var(--text-color);
+  color: var(--text-color-he);
   font-size: 25px;
   font-weight: bold;
   /* float left so links group side by side starting on the left */
@@ -90,53 +89,58 @@ header .navbar > a,
 header .navbar .dropdown > a {
   /* float left so links group side by side starting on the left */
   float: left;
-  color: var(--text-color);
+  color: var(--text-color-me);
   font-size: 18px;
   /* add a small space separating links */
   /* margin: 0px 0px; */
   /* needed to fill size, so it doesn't increase when hovering */
-  border-bottom: 3px solid var(--background-color);
+  border-top: 3px solid var(--background-color-e1);
+  border-bottom: 3px solid var(--background-color-e1);
 }
 
 /* navbar links on active */
 header .navbar > a.active,
 header .navbar .dropdown > a.active {
   /* color: var(--text-color); */
-  border-bottom: 3px solid var(--text-color);
+  border-top: 3px solid var(--highlight-color-p);
 }
 
 /* navbar links on hover */
-header .navbar > a:hover,
-header .navbar .dropdown > a:hover {
-  color: var(--background-color);
-  background-color: var(--text-color);
-  border-bottom: 3px solid var(--text-color);
+header .navbar > a:hover {
+  color: var(--text-color-he);
+  /* background-color: var(--background-color-e1); */
+  /* border-bottom: 3px solid var(--highlight-color); */
 }
 
 /* navbar links on hover */
 header .navbar .dropdown:hover > a {
-  color: var(--background-color);
-  background-color: var(--text-color);
-  border-bottom: 3px solid var(--text-color);
+  color: var(--text-color-he);
+  background-color: var(--background-color-e2);
+  border-top: 3px solid var(--background-color-e2);
+  border-bottom: 3px solid var(--background-color-e2);
+}
+
+/* navbar links on hover and active */
+header .navbar .dropdown:hover > a.active {
+  border-top: 3px solid var(--highlight-color-p);
 }
 
 /* dropdown content links */
 .dropdown-content > a {
   /* arrange items vertically */
   display: block;
-  color: var(--background-color);
+  color: var(--text-color-me);
 }
 
 /* dropdown content links on active */
 .dropdown-content > a.active {
-  color: var(--text-color);
-  background-color: var(--background-color);
+  color: var(--text-color-he);
 }
 
 /* dropdown content links on hover */
 .dropdown-content > a:hover {
-  color: var(--text-color);
-  background-color: var(--background-color);
+  color: var(--text-color-he);
+  background-color: var(--background-color-e2);
 }
 
 /* THEME PICKER */
@@ -161,10 +165,11 @@ header div#theme-picker button.toggle-theme {
   font-size: 18px;
   /* remove standard button border */
   border: 0px;
-  border-bottom: 3px solid var(--background-color);
+  border-bottom: 3px solid var(--background-color-e1);
+  border-top: 3px solid var(--background-color-e1);
   /* opposite colors */
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--background-color-e1);
+  color: var(--text-color-me);
 }
 
 /* theme options list, containing individual theme pickers */
@@ -174,7 +179,7 @@ header div#theme-picker div.theme-options {
   /* place just below navbar link*/
   position: absolute;
   top: 52px;
-  background-color: var(--text-color);
+  background-color: var(--background-color-e1);
 }
 
 /* show theme options on hover */
@@ -191,8 +196,8 @@ header div#theme-picker div.theme-options button.pick-theme {
   line-height: 25px;
   font-size: 18px;
   border: 0px; /* remove standard button border */
-  background-color: var(--text-color);
-  color: var(--background-color);
+  background-color: var(--background-color-e1);
+  color: var(--text-color-e2);
 }
 
 main {
@@ -201,12 +206,12 @@ main {
 
 /* link yet to be visited */
 main a:link {
-  color: var(--highlight-color);
+  color: var(--highlight-color-p);
 }
 
 /* visited link */
 main a:visited {
-  color: var(--text-color);
+  color: var(--highlight-color-s);
 }
 
 /* MODAL FOR .BIB AND ABSTRACT */
@@ -221,16 +226,16 @@ div.modal {
     width: 100%; /* full width */
     height: 100%; /* full height */
     overflow: auto; /* enable scroll if needed */
-    background-color: var(--dark-transparent); /* Black w/ opacity */
+    background-color: var(--dark-gray-transparent); /* Black w/ opacity */
 }
 
 /* modal content box */
 div.modal div.modal-content {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--background-color-e2);
+    color: var(--text-color-he);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid var(--highlight-color);
+    border: 3px solid var(--background-color-e1);
     width: 50%; /* Could be more or less, depending on screen size */
     height: 200px;
     overflow: scroll; /* hide text overflowing but allow scroll */
@@ -238,7 +243,7 @@ div.modal div.modal-content {
 
 /* The Close Button */
 div.modal div.modal-content .close {
-    color: var(--text-color);
+    color: var(--text-color-he);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -246,7 +251,7 @@ div.modal div.modal-content .close {
 
 div.modal div.modal-content .close:hover,
 div.modal div.modal-content .close:focus {
-    color: var(--highlight-color);
+    color: var(--highlight-color-p);
     text-decoration: none;
     cursor: pointer;
 }
