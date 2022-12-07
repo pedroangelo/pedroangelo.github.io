@@ -2,11 +2,11 @@
 @import "/css/z-index.css";
 
 body {
-  margin: 0px;
-  background-color: var(--background-color);
-  /* font Arial, fall back on Helvetica */
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text-color-he);
+    margin: 0px;
+    background-color: var(--background-color);
+    /* font Arial, fall back on Helvetica */
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color-he);
 }
 
 /* HEADER */
@@ -25,16 +25,14 @@ header {
 
 /* inner header div, where home button / title and navbar are */
 header .inner-header {
-  /* place contents within 76% of the width of the page */
-  margin: 0 15% 0 12%;
   /* needed in this element, so dropdown menu can appear outside header */
   overflow: hidden;
 }
 
 /* navigation bar to the right of logo */
-header .inner-header nav.navbar {
+header nav.navbar {
   /* float bar to the right */
-  float: right;
+  float: left;
 }
 
 /* The dropdown container, containing the navbar link as well as all sublinks */
@@ -49,7 +47,7 @@ header .dropdown {
   display: none;
   /* place just below navbar link*/
   position: absolute;
-  top: 60px;
+  top: 54px;
   background-color: var(--background-color-e2);
   color: var(--text-color-me);
   /* extend border of navbar links, to encompass top of .dropdown-content */
@@ -67,7 +65,7 @@ header .dropdown {
 /* header logo: #header-logo */
 /* navbar links: .navbar > a and .navbar .dropdown > a */
 /* dropdown content links: .dropdown-contents > a */
-header div.inner-header a {
+header a {
   text-align: center;
   padding: 12px 12px;
   /* remove underline usual in links */
@@ -82,6 +80,7 @@ header #header-logo {
   font-weight: bold;
   /* float left so links group side by side starting on the left */
   float: left;
+  margin: 0px 45% 0px 2%;
 }
 
 /* navbar links */
@@ -147,7 +146,7 @@ header .navbar .dropdown:hover > a.active {
 
 /* theme picker container */
 header div#theme-picker {
-    float: left;
+    float: right;
     overflow: hidden;
 }
 
@@ -163,8 +162,6 @@ header div#theme-picker button.theme-button {
   font-size: 18px;
   /* remove standard button border */
   border: 0px;
-  border-bottom: 3px solid var(--background-color-e1);
-  border-top: 3px solid var(--background-color-e1);
   /* opposite colors */
   background-color: var(--background-color-e1);
   color: var(--text-color-me);
@@ -180,15 +177,13 @@ header div#theme-picker div.theme-options {
   display: none;
   /* place just below navbar link*/
   position: absolute;
-  top: 60px;
-  /* right: 0px; */
+  top: 54px;
+  right: 0px;
   background-color: var(--background-color-e2);
 }
 
 header div#theme-picker:hover button.theme-button {
     background-color: var(--background-color-e2);
-    border-bottom: 3px solid var(--background-color-e2);
-    border-top: 3px solid var(--background-color-e2);
 }
     
 /* show theme options on hover */
