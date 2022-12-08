@@ -18,8 +18,9 @@ body {
 header {
   position: sticky; /* sticks to top when scrolling, doesn't overlap other content */
   top: 0; /* place on top */
-  background-color: var(--background-color-e1);
+  background-color: var(--elevation-color-l1);
   z-index: var(--z-index-header); /* place on top of content*/
+  box-shadow: 0px 3px 3px 0px var(--shadow-color-l1);
 }
 
 /* inner header div, where home button / title, navbar and theme picker are */
@@ -45,8 +46,9 @@ header .dropdown {
   display: none; /* hidden by default, until hovered */
   position: absolute; /* needed so it doesn't increase size of header */
   top: 55px; /* place just below navbar link*/
-  background-color: var(--background-color-e2);
+  background-color: var(--elevation-color-l2);
   color: var(--text-color-me);
+  box-shadow: 0px 3px 3px 0px var(--shadow-color-l2);
 }
 
 /* show the dropdown menu on hover */
@@ -82,8 +84,8 @@ header .navbar .dropdown > a {
   float: left; /* links group side by side starting on the left */
   color: var(--text-color-me);
   font-size: 18px;
-  border-top: 3px solid var(--background-color-e1); /* prevent hovering from increasing size of header */
-  border-bottom: 3px solid var(--background-color-e1); /* prevent hovering from increasing size of header */
+  border-top: 3px solid var(--elevation-color-l1); /* prevent hovering from increasing size of header */
+  border-bottom: 3px solid var(--elevation-color-l1); /* prevent hovering from increasing size of header */
 }
 
 /* navbar links on active */
@@ -101,9 +103,9 @@ header .navbar > a:hover {
 /* navbar links on hover */
 header .navbar .dropdown:hover > a {
   color: var(--text-color-he);
-  background-color: var(--background-color-e2);
-  border-top: 3px solid var(--background-color-e2);
-  border-bottom: 3px solid var(--background-color-e2);
+  background-color: var(--elevation-color-l2);
+  border-top: 3px solid var(--elevation-color-l2);
+  border-bottom: 3px solid var(--elevation-color-l2);
 }
 
 /* navbar links on hover and active */
@@ -125,7 +127,7 @@ header .dropdown-content > a.active {
 /* dropdown content links on hover */
 header .dropdown-content > a:hover {
   color: var(--text-color-he);
-  background-color: var(--background-color-e3);
+  background-color: var(--elevation-color-l3);
 }
 
 /* THEME PICKER */
@@ -143,7 +145,7 @@ header div#theme-picker button.theme-button {
   line-height: 25px;
   font-size: 20px;
   border: 0px; /* remove standard button border */
-  background-color: var(--background-color-e1);
+  background-color: var(--elevation-color-l1);
   color: var(--text-color-me);
 }
 /* google material icon definitions */
@@ -157,17 +159,18 @@ header div#theme-picker div.theme-options {
   position: absolute; /* needed so it doesn't increase size of header */
   top: 55px; /* place just below navbar link*/
   right: 0px;
-  background-color: var(--background-color-e2);
+  background-color: var(--elevation-color-l2);
+  box-shadow: 0px 3px 3px 0px var(--shadow-color-l2);
 }
 
 /* theme picker button on hover */
 header div#theme-picker:hover button.theme-button {
-    background-color: var(--background-color-e2);
+    background-color: var(--elevation-color-l2);
 }
     
 /* show theme options on hover */
 header div#theme-picker:hover div.theme-options {
-  display: block;
+    display: block;
 }
 
 /* individual pick theme button */
@@ -179,7 +182,7 @@ header div#theme-picker div.theme-options button.pick-theme {
   line-height: 25px;
   font-size: 18px;
   border: 0px; /* remove standard button border */
-  background-color: var(--background-color-e2);
+  background-color: var(--elevation-color-l2);
   color: var(--text-color-me);
   width: 100%;
   text-align: left;
@@ -193,7 +196,7 @@ header div#theme-picker div.theme-options button.pick-theme span.theme-icon {
 
 /* individual theme options pick theme button icon on hover */
 header div#theme-picker div.theme-options button.pick-theme:hover {
-  background-color: var(--background-color-e3);
+  background-color: var(--elevation-color-l3);
 }
 
 /* individual theme options pick theme button icon on active */
@@ -234,11 +237,11 @@ div.modal {
 
 /* modal content box */
 div.modal div.modal-content {
-    background-color: var(--background-color-e2);
+    background-color: var(--elevation-color-l2);
     color: var(--text-color-he);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 3px solid var(--background-color-e1);
+    border: 3px solid var(--elevation-color-l1);
     width: 50%; /* Could be more or less, depending on screen size */
     height: 200px;
     overflow: scroll; /* hide text overflowing but allow scroll */
