@@ -47,7 +47,7 @@ header .dropdown {
   display: none;
   /* place just below navbar link*/
   position: absolute;
-  top: 54px;
+  top: 55px;
   background-color: var(--background-color-e2);
   color: var(--text-color-me);
   /* extend border of navbar links, to encompass top of .dropdown-content */
@@ -155,11 +155,11 @@ header div#theme-picker button.theme-button {
   /* keep orientation with the navbar links*/
   float: left;
   text-align: center;
-  padding: 12px 12px;
+  padding: 15px 12px 11px 12px;
   /* remove underline usual in links */
   text-decoration: none;
   line-height: 25px;
-  font-size: 18px;
+  font-size: 20px;
   /* remove standard button border */
   border: 0px;
   /* opposite colors */
@@ -177,7 +177,7 @@ header div#theme-picker div.theme-options {
   display: none;
   /* place just below navbar link*/
   position: absolute;
-  top: 54px;
+  top: 55px;
   right: 0px;
   background-color: var(--background-color-e2);
 }
@@ -204,6 +204,11 @@ header div#theme-picker div.theme-options button.pick-theme {
   color: var(--text-color-me);
   width: 100%;
   text-align: left;
+}
+
+div#theme-picker div.theme-options button.pick-theme span.theme-icon {
+    float: left;
+    margin: 0px 5px 0px 0px;
 }
 
 header div#theme-picker div.theme-options button.pick-theme:hover {
