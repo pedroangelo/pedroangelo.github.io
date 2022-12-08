@@ -1,61 +1,56 @@
 @import "/css/theme.css";
 @import "/css/z-index.css";
 
+/* BODY */
+
 body {
     margin: 0px;
     background-color: var(--background-color);
-    /* font Arial, fall back on Helvetica */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /* font Arial, fall back on Helvetica */
     color: var(--text-color-he);
 }
+
+/* END BODY */
 
 /* HEADER */
 
 /* header element, styled as the top bar */
 header {
-  /* sticks to the top when scrolling, without overlapping other content */
-  position: sticky;
-  /* place on top */
-  top: 0;
+  position: sticky; /* sticks to top when scrolling, doesn't overlap other content */
+  top: 0; /* place on top */
   background-color: var(--background-color-e1);
-  /* border-bottom: 1px solid var(--background-color-e1); */
-  /* place on top of content*/
-  z-index: var(--z-index-header);
+  z-index: var(--z-index-header); /* place on top of content*/
 }
 
-/* inner header div, where home button / title and navbar are */
+/* inner header div, where home button / title, navbar and theme picker are */
 header .inner-header {
-  /* needed in this element, so dropdown menu can appear outside header */
-  overflow: hidden;
+  overflow: hidden; /* allows dropdown menu to appear outside header */
 }
+
+/* NAV BAR */
 
 /* navigation bar to the right of logo */
 header nav.navbar {
-  /* float bar to the right */
-  float: left;
+  float: left; /* float bar to the left */
 }
 
-/* The dropdown container, containing the navbar link as well as all sublinks */
+/* dropdown container, containing the navbar link as well as all sublinks */
 header .dropdown {
   float: left;
   overflow: hidden;
 }
 
-/* Dropdown content, containing sublinks */
+/* dropdown content, containing sublinks */
 .navbar .dropdown .dropdown-content {
-  /* hidden by default, until hovered */
-  display: none;
-  /* place just below navbar link*/
-  position: absolute;
-  top: 55px;
+  display: none; /* hidden by default, until hovered */
+  position: absolute; /* needed so it doesn't increase size of header */
+  top: 55px; /* place just below navbar link*/
   background-color: var(--background-color-e2);
   color: var(--text-color-me);
-  /* extend border of navbar links, to encompass top of .dropdown-content */
-  /* border-top: 3px solid var(--highlight-color-p); */
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+/* show the dropdown menu on hover */
+header .dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -68,8 +63,7 @@ header .dropdown {
 header a {
   text-align: center;
   padding: 12px 12px;
-  /* remove underline usual in links */
-  text-decoration: none;
+  text-decoration: none; /* remove underline usual in links */
   line-height: 25px;
 }
 
@@ -78,23 +72,18 @@ header #header-logo {
   color: var(--text-color-he);
   font-size: 25px;
   font-weight: bold;
-  /* float left so links group side by side starting on the left */
-  float: left;
+  float: left; /* links group side by side starting on the left */
   margin: 0px 45% 0px 2%;
 }
 
 /* navbar links */
 header .navbar > a,
 header .navbar .dropdown > a {
-  /* float left so links group side by side starting on the left */
-  float: left;
+  float: left; /* links group side by side starting on the left */
   color: var(--text-color-me);
   font-size: 18px;
-  /* add a small space separating links */
-  /* margin: 0px 0px; */
-  /* needed to fill size, so it doesn't increase when hovering */
-  border-top: 3px solid var(--background-color-e1);
-  border-bottom: 3px solid var(--background-color-e1);
+  border-top: 3px solid var(--background-color-e1); /* prevent hovering from increasing size of header */
+  border-bottom: 3px solid var(--background-color-e1); /* prevent hovering from increasing size of header */
 }
 
 /* navbar links on active */
@@ -107,8 +96,6 @@ header .navbar .dropdown > a.active {
 /* navbar links on hover */
 header .navbar > a:hover {
   color: var(--text-color-he);
-  /* background-color: var(--background-color-e1); */
-  /* border-bottom: 3px solid var(--highlight-color); */
 }
 
 /* navbar links on hover */
@@ -125,19 +112,18 @@ header .navbar .dropdown:hover > a.active {
 }
 
 /* dropdown content links */
-.dropdown-content > a {
-  /* arrange items vertically */
-  display: block;
+header .dropdown-content > a {
+  display: block; /* arrange items vertically */
   color: var(--text-color-me);
 }
 
 /* dropdown content links on active */
-.dropdown-content > a.active {
+header .dropdown-content > a.active {
   color: var(--text-color-he);
 }
 
 /* dropdown content links on hover */
-.dropdown-content > a:hover {
+header .dropdown-content > a:hover {
   color: var(--text-color-he);
   background-color: var(--background-color-e3);
 }
@@ -152,36 +138,29 @@ header div#theme-picker {
 
 /* button containing icon */
 header div#theme-picker button.theme-button {
-  /* keep orientation with the navbar links*/
-  float: left;
   text-align: center;
   padding: 15px 12px 11px 12px;
-  /* remove underline usual in links */
-  text-decoration: none;
   line-height: 25px;
   font-size: 20px;
-  /* remove standard button border */
-  border: 0px;
-  /* opposite colors */
+  border: 0px; /* remove standard button border */
   background-color: var(--background-color-e1);
   color: var(--text-color-me);
 }
-
+/* google material icon definitions */
 header div#theme-picker .material-symbols-outlined {
     font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 40;
 }
 
 /* theme options list, containing individual theme pickers */
 header div#theme-picker div.theme-options {
-  /* hidden by default, until hovered */
-  display: none;
-  /* place just below navbar link*/
-  position: absolute;
-  top: 55px;
+  display: none; /* hidden by default, until hovered */
+  position: absolute; /* needed so it doesn't increase size of header */
+  top: 55px; /* place just below navbar link*/
   right: 0px;
   background-color: var(--background-color-e2);
 }
 
+/* theme picker button on hover */
 header div#theme-picker:hover button.theme-button {
     background-color: var(--background-color-e2);
 }
@@ -191,12 +170,12 @@ header div#theme-picker:hover div.theme-options {
   display: block;
 }
 
+/* individual pick theme button */
 header div#theme-picker div.theme-options button.pick-theme {
   display: block; /* keep orientation with the navbar links*/
   cursor: pointer; /* change pointer */
   text-align: center;
   padding: 12px 12px;
-  text-decoration: none; /* remove underline usual in links */
   line-height: 25px;
   font-size: 18px;
   border: 0px; /* remove standard button border */
@@ -206,18 +185,23 @@ header div#theme-picker div.theme-options button.pick-theme {
   text-align: left;
 }
 
-div#theme-picker div.theme-options button.pick-theme span.theme-icon {
+/* individual theme options pick theme button icon */
+header div#theme-picker div.theme-options button.pick-theme span.theme-icon {
     float: left;
     margin: 0px 5px 0px 0px;
 }
 
+/* individual theme options pick theme button icon on hover */
 header div#theme-picker div.theme-options button.pick-theme:hover {
   background-color: var(--background-color-e3);
 }
 
+/* individual theme options pick theme button icon on active */
 header div#theme-picker div.theme-options button.pick-theme.active {
   color: var(--text-color-he);
 }
+
+/* END HEADER */
 
 main {
   margin: 40px;

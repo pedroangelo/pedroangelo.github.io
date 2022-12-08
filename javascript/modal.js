@@ -1,3 +1,5 @@
+// GET FUNCTIONS
+
 // get paper references
 function getPaperReferences() {
     // get all .paper-entry elements
@@ -22,29 +24,7 @@ function getModalFromChild(object) {
     return getModal(paperReference);
 }
 
-// fill modal with information
-function populateModal(paperReference) {
-    // get selected modal
-    let modal = getModal(paperReference);
-    // get modal text element
-    let modalText = modal.querySelector("div.modal-content p");
-    // get bib file contents
-    let content = paperReference;
-    modalText.innerHTML = content;
-}
-
-// initialize modals
-function initializeModals() {
-    // get paper references
-    let paperReferences = getPaperReferences();
-    // for each paper reference:
-    for (let i = 0; i < paperReferences.length; i++) {
-	// populate modal with information relative to paper reference
-	// populateModal(paperReferences[i]);
-	// add event listener to close modal on click
-	window.addEventListener('click', function(event) { if (event.target == getModal(paperReferences[i])) { hideModal(paperReferences[i]); }});
-    }
-}
+// SHOW AND HIDE FUNCTIONS
 
 // show selected modal
 function showModal(reference) {
@@ -52,16 +32,16 @@ function showModal(reference) {
     modal.style.display = "block";
 }
 
-// hide selected modal
-function hideModal(reference) {
-    let modal = getModal(reference);
-    modal.style.display = "none";
-}
-
 // show modal from child object
 function showModalFromChild(object) {
     let modal = getModalFromChild(object);
     modal.style.display = "block";    
+}
+
+// hide selected modal
+function hideModal(reference) {
+    let modal = getModal(reference);
+    modal.style.display = "none";
 }
 
 // hide modal from child object
@@ -80,6 +60,8 @@ function hideAllModal() {
     }
 }
 
+// BUTTON ACTION FUNCTIONS
+
 // copy .bib file contents
 function copyBib(object) {
     // get .bib file contents from .modal-content p element
@@ -96,4 +78,31 @@ function downloadBib(object) {
     let paperReference = object.closest(".paper-entry").classList[1];
     // open window with object, causing browser to download it
     window.open("/resources/papers/" + paperReference + ".bib");
+}
+
+// INITIALIZATION FUNCTONS
+
+// fill modal with information
+function populateModal(paperReference) {
+    // get selected modal
+    let modal = getModal(paperReference);
+    // get modal text element
+    let modalText = modal.querySelector("div.modal-content p");
+    // get bib file contents
+    let content = paperReference;
+    // write contents
+    modalText.innerHTML = content;
+}
+
+// initialize modals
+function initializeModals() {
+    // get paper references
+    let paperReferences = getPaperReferences();
+    // for each paper reference:
+    for (let i = 0; i < paperReferences.length; i++) {
+	// populate modal with information relative to paper reference
+	// populateModal(paperReferences[i]);
+	// add event listener to close modal on click
+	window.addEventListener('click', function(event) { if (event.target == getModal(paperReferences[i])) { hideModal(paperReferences[i]); }});
+    }
 }

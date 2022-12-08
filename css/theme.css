@@ -1,5 +1,6 @@
 @import "/css/colours.css";
 
+/* 
 body.default-theme, body.light-theme {
     --background-color: var(--white); /* background color */
     --text-color-he: var(--gray-900); /* white high emphasis */
@@ -59,13 +60,3 @@ body.default-theme, body.dark-theme {
     --background-color-e3: var(--gray-700); /* background color elevation 3 */
 }
 }
-
-
-/* OTHER THEMES
-
-body.darkblue-theme {
-    --primary-colour: var(--cream);
-    --background-colour: var(--navy);
-    --highlight-colour: var(--orange);
-}
-*/

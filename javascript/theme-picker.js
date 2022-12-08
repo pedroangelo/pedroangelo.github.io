@@ -18,18 +18,16 @@ function getIconCode(theme) {
 
 // switch to theme
 function switchToTheme(theme) {
-    // changes in body
-    
     // change local storage entry
     localStorage.setItem("current-theme", theme + "-theme");
-    // change body's class
+    
+    // remove theme class in body
     for (let i = 0; i < themeList.length; i++) {
 	document.body.classList.remove(themeList[i] + "-theme");
     }
+    // add correct theme class
     document.body.classList.add(theme + "-theme");
 
-    // changes in theme picker
-    
     // get theme-picker div element
     let themePicker = document.querySelector("div#theme-picker");
     // get theme icon element inside theme button
