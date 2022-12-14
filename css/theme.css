@@ -1,89 +1,95 @@
 @import "/css/colours.css";
 
+/* COLOR DEFINITIONS
+
+--text-color-he: high emphasis text color
+
+-- shadow: 0px 2px 3px 0px
+*/
+
 body.default-theme, body.light-theme {
     --background-color: var(--white);
     
-    --text-color-he: var(--gray-900); /* white high emphasis */
-    --text-color-me: var(--gray-800); /* white medium emphasis */
-    --text-color-le: var(--gray-700); /* white low emphasis */
+    --text-color-he: var(--gray-15);
+    --text-color-me: var(--gray-30);
+    --text-color-le: var(--gray-50);
     
-    --highlight-color-p: var(--blue-900);
-    --highlight-color-s: var(--blue-800);
+    --highlight-color-p: var(--blue-40);
+    --highlight-color-s: var(--blue-50);
 
-    --elevation-color-l1: var(--gray-200);
-    --elevation-color-l2: var(--gray-300);
-    --elevation-color-l3: var(--gray-400);
-    --elevation-color-l4: var(--gray-500);
-    --elevation-color-l5: var(--gray-600);
+    --elevation-color-l1: var(--gray-90);
+    --elevation-color-l2: var(--gray-80);
+    --elevation-color-l3: var(--gray-70);
+    --elevation-color-l4: var(--gray-60);
+    --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-400); /* 0px 2px 3px 0px */
-    --shadow-color-l2: var(--gray-500);
-    --shadow-color-l3: var(--gray-600);
+    --shadow-color-l1: var(--gray-70);
+    --shadow-color-l2: var(--gray-60);
+    --shadow-color-l3: var(--gray-50);
 }
 
 body.dark-theme {
-    --background-color: var(--dark-gray);
+    --background-color: var(--gray-7);
     
-    --text-color-he: var(--white-he); /* white high emphasis */
-    --text-color-me: var(--white-me); /* white medium emphasis */
-    --text-color-le: var(--white-le); /* white low emphasis */
+    --text-color-he: var(--white-he);
+    --text-color-me: var(--white-me);
+    --text-color-le: var(--white-le);
     
-    --highlight-color-p: var(--blue-300);
-    --highlight-color-s: var(--blue-200);
+    --highlight-color-p: var(--blue-80);
+    --highlight-color-s: var(--blue-70);
 
-    --elevation-color-l1: var(--gray-900);
-    --elevation-color-l2: var(--gray-800);
-    --elevation-color-l3: var(--gray-700);
-    --elevation-color-l4: var(--gray-600);
-    --elevation-color-l5: var(--gray-500);
+    --elevation-color-l1: var(--gray-10);
+    --elevation-color-l2: var(--gray-20);
+    --elevation-color-l3: var(--gray-30);
+    --elevation-color-l4: var(--gray-40);
+    --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--dark-gray);
-    --shadow-color-l2: var(--dark-gray);
-    --shadow-color-l3: var(--dark-gray);
+    --shadow-color-l1: var(--gray-7);
+    --shadow-color-l2: var(--gray-7);
+    --shadow-color-l3: var(--gray-7);
 }
-
 
 @media (prefers-color-scheme: light) {
 body.default-theme, body.light-theme {
     --background-color: var(--white);
     
-    --text-color-he: var(--gray-900); /* white high emphasis */
-    --text-color-me: var(--gray-800); /* white medium emphasis */
-    --text-color-le: var(--gray-700); /* white low emphasis */
+    --text-color-he: var(--gray-15);
+    --text-color-me: var(--gray-30);
+    --text-color-le: var(--gray-50);
     
-    --highlight-color-p: var(--blue-900);
-    --highlight-color-s: var(--blue-800);
+    --highlight-color-p: var(--blue-40);
+    --highlight-color-s: var(--blue-50);
 
-    --elevation-color-l1: var(--gray-200);
-    --elevation-color-l2: var(--gray-300);
-    --elevation-color-l3: var(--gray-400);
-    --elevation-color-l4: var(--gray-500);
-    --elevation-color-l5: var(--gray-600);
+    --elevation-color-l1: var(--gray-90);
+    --elevation-color-l2: var(--gray-80);
+    --elevation-color-l3: var(--gray-70);
+    --elevation-color-l4: var(--gray-60);
+    --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-400); /* 0px 2px 3px 0px */
-    --shadow-color-l2: var(--gray-500);
-    --shadow-color-l3: var(--gray-600);
+    --shadow-color-l1: var(--gray-70);
+    --shadow-color-l2: var(--gray-60);
+    --shadow-color-l3: var(--gray-50);
 }
 
 body.dark-theme {
-    --background-color: var(--dark-gray);
+    --background-color: var(--gray-7);
     
-    --text-color-he: var(--white-he); /* white high emphasis */
-    --text-color-me: var(--white-me); /* white medium emphasis */
-    --text-color-le: var(--white-le); /* white low emphasis */
+    --text-color-he: var(--white-he);
+    --text-color-me: var(--white-me);
+    --text-color-le: var(--white-le);
     
-    --highlight-color-p: var(--blue-300);
-    --highlight-color-s: var(--blue-200);
+    --highlight-color-p: var(--blue-80);
+    --highlight-color-s: var(--blue-70);
 
-    --elevation-color-l1: var(--gray-900);
-    --elevation-color-l2: var(--gray-800);
-    --elevation-color-l3: var(--gray-700);
-    --elevation-color-l4: var(--gray-600);
-    --elevation-color-l5: var(--gray-500);
+    --elevation-color-l1: var(--gray-10);
+    --elevation-color-l2: var(--gray-20);
+    --elevation-color-l3: var(--gray-30);
+    --elevation-color-l4: var(--gray-40);
+    --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--dark-gray);
-    --shadow-color-l2: var(--dark-gray);
-    --shadow-color-l3: var(--dark-gray);
+    --shadow-color-l1: var(--gray-7);
+    --shadow-color-l2: var(--gray-7);
+    --shadow-color-l3: var(--gray-7);
 }
 }
 
@@ -91,42 +97,42 @@ body.dark-theme {
 body.light-theme {
     --background-color: var(--white);
     
-    --text-color-he: var(--gray-900); /* white high emphasis */
-    --text-color-me: var(--gray-800); /* white medium emphasis */
-    --text-color-le: var(--gray-700); /* white low emphasis */
+    --text-color-he: var(--gray-15);
+    --text-color-me: var(--gray-30);
+    --text-color-le: var(--gray-50);
     
-    --highlight-color-p: var(--blue-900);
-    --highlight-color-s: var(--blue-800);
+    --highlight-color-p: var(--blue-40);
+    --highlight-color-s: var(--blue-50);
 
-    --elevation-color-l1: var(--gray-200);
-    --elevation-color-l2: var(--gray-300);
-    --elevation-color-l3: var(--gray-400);
-    --elevation-color-l4: var(--gray-500);
-    --elevation-color-l5: var(--gray-600);
+    --elevation-color-l1: var(--gray-90);
+    --elevation-color-l2: var(--gray-80);
+    --elevation-color-l3: var(--gray-70);
+    --elevation-color-l4: var(--gray-60);
+    --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-400); /* 0px 2px 3px 0px */
-    --shadow-color-l2: var(--gray-500);
-    --shadow-color-l3: var(--gray-600);
+    --shadow-color-l1: var(--gray-70);
+    --shadow-color-l2: var(--gray-60);
+    --shadow-color-l3: var(--gray-50);
 }
 
 body.default-theme, body.dark-theme {
-    --background-color: var(--dark-gray);
+    --background-color: var(--gray-7);
     
-    --text-color-he: var(--white-he); /* white high emphasis */
-    --text-color-me: var(--white-me); /* white medium emphasis */
-    --text-color-le: var(--white-le); /* white low emphasis */
+    --text-color-he: var(--white-he);
+    --text-color-me: var(--white-me);
+    --text-color-le: var(--white-le);
     
-    --highlight-color-p: var(--blue-300);
-    --highlight-color-s: var(--blue-200);
+    --highlight-color-p: var(--blue-80);
+    --highlight-color-s: var(--blue-70);
 
-    --elevation-color-l1: var(--gray-900);
-    --elevation-color-l2: var(--gray-800);
-    --elevation-color-l3: var(--gray-700);
-    --elevation-color-l4: var(--gray-600);
-    --elevation-color-l5: var(--gray-500);
+    --elevation-color-l1: var(--gray-10);
+    --elevation-color-l2: var(--gray-20);
+    --elevation-color-l3: var(--gray-30);
+    --elevation-color-l4: var(--gray-40);
+    --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--dark-gray);
-    --shadow-color-l2: var(--dark-gray);
-    --shadow-color-l3: var(--dark-gray);
+    --shadow-color-l1: var(--gray-7);
+    --shadow-color-l2: var(--gray-7);
+    --shadow-color-l3: var(--gray-7);
 }
 }

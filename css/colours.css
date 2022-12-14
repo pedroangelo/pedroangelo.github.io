@@ -1,6 +1,4 @@
 :root {
-    /* colour palette, colors taken from https://materialui.co/colors */
-    
     /* black and whites */
     --black: #000000;
     --white: #FFFFFF;
@@ -11,42 +9,40 @@
     --white-me: rgba(255,255,255,0.6);
     --white-le: rgba(255,255,255,0.38);
     
-    /* shades of gray*/
-    --dark-gray: #121212;
+    /* shades of gray #808080 */
     --dark-gray-transparent: rgba(18,18,18,0.4);
-    
-    --gray-900: #212121;
-    --gray-800: #424242;
-    --gray-700: #616161;
-    --gray-600: #757575;
-    --gray-500: #9E9E9E;
-    --gray-400: #BDBDBD;
-    --gray-300: #E0E0E0;
-    --gray-200: #EEEEEE;
-    --gray-100: #F5F5F5;
-    --gray-50: #FAFAFA;
 
-    /* shades of blue #0D47A1 */
-    --blue-900: #0D47A1;
-    --blue-800: #1565C0;
-    --blue-700: #1976D2;
-    --blue-600: #1E88E5;
-    --blue-500: #2196F3;
-    --blue-400: #42A5F5;
-    --blue-300: #64B5F6;
-    --blue-200: #90CAF9;
-    --blue-100: #BBDEFB;
-    --blue-50: #E3F2FD;
+    --gray-95: #F2F2F2;
+    --gray-90: #E6E6E6;
+    --gray-80: #CCCCCC;
+    --gray-70: #B3B3B3;
+    --gray-60: #999999;
+    --gray-50: #808080;
+    --gray-40: #666666;
+    --gray-30: #4D4D4D;
+    --gray-20: #333333;
+    --gray-15: #262626;
+    --gray-10: #1A1A1A;
+    --gray-7: #121212;
+    --gray-5: #0D0D0D;
 
-    /* shades of orange #E65100 */
-    --orange-900: #E65100;
-    --orange-800: #EF6C00;
+    /* shades of blue #0080ff */
+    --blue-90: #CCE5FF;
+    --blue-80: #99CCFF;
+    --blue-70: #66B2FF;
+    --blue-60: #3399FF;
+    --blue-50: #0080FF;
+    --blue-40: #0066CC;
+    --blue-30: #004D99;
+    --blue-20: #003366;
+    --blue-10: #001933;
+    --blue-5: #000D1A;
 
-    /* shades of cream #FFF1DB */
-    --cream: #FFF1DB
+    /* shades of orange #FF5A00 */
+    --orange-50: #FF5A00;
 	     
     /* colourful */
-    --cream: #F2E7D5;
+    --cream: #FFF1DB
     --navy: #232533;
     --orange: #FF5722;
 }
