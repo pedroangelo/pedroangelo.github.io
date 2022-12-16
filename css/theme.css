@@ -19,17 +19,17 @@ body.default-theme, body.light-theme {
 
     --elevation-color-l1: var(--gray-90);
     --elevation-color-l2: var(--gray-80);
-    --elevation-color-l3: var(--gray-70);
+    --elevation-color-l3: var(--gray-p0);
     --elevation-color-l4: var(--gray-60);
     --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-70);
+    --shadow-color-l1: var(--gray-p0);
     --shadow-color-l2: var(--gray-60);
     --shadow-color-l3: var(--gray-50);
 }
 
 body.dark-theme {
-    --background-color: var(--gray-7);
+    --background-color: var(--gray-p);
     
     --text-color-he: var(--white-he);
     --text-color-me: var(--white-me);
@@ -44,9 +44,9 @@ body.dark-theme {
     --elevation-color-l4: var(--gray-40);
     --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-7);
-    --shadow-color-l2: var(--gray-7);
-    --shadow-color-l3: var(--gray-7);
+    --shadow-color-l1: var(--gray-p);
+    --shadow-color-l2: var(--gray-p);
+    --shadow-color-l3: var(--gray-p);
 }
 
 @media (prefers-color-scheme: light) {
@@ -62,17 +62,17 @@ body.default-theme, body.light-theme {
 
     --elevation-color-l1: var(--gray-90);
     --elevation-color-l2: var(--gray-80);
-    --elevation-color-l3: var(--gray-70);
+    --elevation-color-l3: var(--gray-p0);
     --elevation-color-l4: var(--gray-60);
     --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-70);
+    --shadow-color-l1: var(--gray-p0);
     --shadow-color-l2: var(--gray-60);
     --shadow-color-l3: var(--gray-50);
 }
 
 body.dark-theme {
-    --background-color: var(--gray-7);
+    --background-color: var(--gray-p);
     
     --text-color-he: var(--white-he);
     --text-color-me: var(--white-me);
@@ -87,9 +87,9 @@ body.dark-theme {
     --elevation-color-l4: var(--gray-40);
     --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-7);
-    --shadow-color-l2: var(--gray-7);
-    --shadow-color-l3: var(--gray-7);
+    --shadow-color-l1: var(--gray-p);
+    --shadow-color-l2: var(--gray-p);
+    --shadow-color-l3: var(--gray-p);
 }
 }
 
@@ -106,17 +106,17 @@ body.light-theme {
 
     --elevation-color-l1: var(--gray-90);
     --elevation-color-l2: var(--gray-80);
-    --elevation-color-l3: var(--gray-70);
+    --elevation-color-l3: var(--gray-p0);
     --elevation-color-l4: var(--gray-60);
     --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-70);
+    --shadow-color-l1: var(--gray-p0);
     --shadow-color-l2: var(--gray-60);
     --shadow-color-l3: var(--gray-50);
 }
 
 body.default-theme, body.dark-theme {
-    --background-color: var(--gray-7);
+    --background-color: var(--gray-p);
     
     --text-color-he: var(--white-he);
     --text-color-me: var(--white-me);
@@ -131,8 +131,8 @@ body.default-theme, body.dark-theme {
     --elevation-color-l4: var(--gray-40);
     --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-7);
-    --shadow-color-l2: var(--gray-7);
-    --shadow-color-l3: var(--gray-7);
+    --shadow-color-l1: var(--gray-p);
+    --shadow-color-l2: var(--gray-p);
+    --shadow-color-l3: var(--gray-p);
 }
 }

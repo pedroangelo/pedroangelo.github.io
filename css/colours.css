@@ -9,37 +9,41 @@
     --white-me: rgba(255,255,255,0.6);
     --white-le: rgba(255,255,255,0.38);
     
-    /* shades of gray #808080 */
+    /* shades of gray #121212 */
     --dark-gray-transparent: rgba(18,18,18,0.4);
 
-    --gray-95: #F2F2F2;
-    --gray-90: #E6E6E6;
-    --gray-80: #CCCCCC;
-    --gray-70: #B3B3B3;
-    --gray-60: #999999;
-    --gray-50: #808080;
-    --gray-40: #666666;
-    --gray-30: #4D4D4D;
-    --gray-20: #333333;
-    --gray-15: #262626;
-    --gray-10: #1A1A1A;
-    --gray-7: #121212;
-    --gray-5: #0D0D0D;
+    --gray-p: #121212;
+
+    --gray-99: hsl(0deg 0% 99%);
+    --gray-95: hsl(0deg 0% 95%);
+    --gray-90: hsl(0deg 0% 90%);
+    --gray-80: hsl(0deg 0% 80%);
+    --gray-70: hsl(0deg 0% 70%);
+    --gray-60: hsl(0deg 0% 60%);
+    --gray-50: hsl(0deg 0% 50%);
+    --gray-40: hsl(0deg 0% 40%);
+    --gray-30: hsl(0deg 0% 30%);
+    --gray-20: hsl(0deg 0% 20%);
+    --gray-15: hsl(0deg 0% 15%);
+    --gray-10: hsl(0deg 0% 10%);
 
     /* shades of blue #0080ff */
-    --blue-90: #CCE5FF;
-    --blue-80: #99CCFF;
-    --blue-70: #66B2FF;
-    --blue-60: #3399FF;
-    --blue-50: #0080FF;
-    --blue-40: #0066CC;
-    --blue-30: #004D99;
-    --blue-20: #003366;
-    --blue-10: #001933;
-    --blue-5: #000D1A;
+    --blue-p: #0080FF;
+
+    --blue-99: hsl(210deg 100% 99%);
+    --blue-95: hsl(210deg 100% 95%);
+    --blue-90: hsl(210deg 100% 90%);
+    --blue-80: hsl(210deg 100% 80%);
+    --blue-70: hsl(210deg 100% 70%);
+    --blue-60: hsl(210deg 100% 60%);
+    --blue-50: hsl(210deg 100% 50%);
+    --blue-40: hsl(210deg 100% 40%);
+    --blue-30: hsl(210deg 100% 30%);
+    --blue-20: hsl(210deg 100% 20%);
+    --blue-10: hsl(210deg 100% 10%);
 
     /* shades of orange #FF5A00 */
-    --orange-50: #FF5A00;
+    --orange-p: #FF5A00;
 	     
     /* colourful */
     --cream: #FFF1DB
