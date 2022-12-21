@@ -19,11 +19,11 @@ body.default-theme, body.light-theme {
 
     --elevation-color-l1: var(--gray-90);
     --elevation-color-l2: var(--gray-80);
-    --elevation-color-l3: var(--gray-p0);
+    --elevation-color-l3: var(--gray-70);
     --elevation-color-l4: var(--gray-60);
     --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-p0);
+    --shadow-color-l1: var(--gray-70);
     --shadow-color-l2: var(--gray-60);
     --shadow-color-l3: var(--gray-50);
 }
@@ -62,11 +62,11 @@ body.default-theme, body.light-theme {
 
     --elevation-color-l1: var(--gray-90);
     --elevation-color-l2: var(--gray-80);
-    --elevation-color-l3: var(--gray-p0);
+    --elevation-color-l3: var(--gray-70);
     --elevation-color-l4: var(--gray-60);
     --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-p0);
+    --shadow-color-l1: var(--gray-70);
     --shadow-color-l2: var(--gray-60);
     --shadow-color-l3: var(--gray-50);
 }
@@ -106,11 +106,11 @@ body.light-theme {
 
     --elevation-color-l1: var(--gray-90);
     --elevation-color-l2: var(--gray-80);
-    --elevation-color-l3: var(--gray-p0);
+    --elevation-color-l3: var(--gray-70);
     --elevation-color-l4: var(--gray-60);
     --elevation-color-l5: var(--gray-50);
 
-    --shadow-color-l1: var(--gray-p0);
+    --shadow-color-l1: var(--gray-70);
     --shadow-color-l2: var(--gray-60);
     --shadow-color-l3: var(--gray-50);
 }
