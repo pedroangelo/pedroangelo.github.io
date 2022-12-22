@@ -4,19 +4,24 @@
 /* paper entry iteration buttons */
 .paper-entry div.paper-iteration a,
 .paper-entry div.paper-iteration button {
+    display: inline-block;
     background-color: var(--background-color);
-    border: none;
+    border: 0px; /* remove standard button border */
     border-radius: 20px;
     color: var(--text-color-me);
-    font-size: 14px;
-    margin: 0px auto;
-    padding: 12px 16px 12px 12px;
+    cursor: pointer; /* change pointer */
+    font-size: 16px;
+    /* margin: 0px 2px 0px 0px; */
+    padding: 10px 16px 10px 12px;
+    text-align: left;
     text-decoration: none; /* remove underline usual in links */
 }
 
 /* paper entry iteration button icon */
 .paper-entry div.paper-iteration a span,
 .paper-entry div.paper-iteration button span {
+    float: left;
+    font-size: 20px;
     margin: 0px 8px 0px 0px;
 }
 
