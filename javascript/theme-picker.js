@@ -19,7 +19,7 @@ function getIconCode(theme) {
 // switch to theme
 function switchToTheme(theme) {
     // change local storage entry
-    localStorage.setItem("current-theme", theme + "-theme");
+    localStorage.setItem("current-theme", theme);
     
     // remove theme class in body
     for (let i = 0; i < themeList.length; i++) {
@@ -46,13 +46,13 @@ function switchToTheme(theme) {
 // toggle between themes
 function toggleTheme() {
     switch (localStorage.getItem("current-theme")) {
-    case "default-theme" :
+    case "default" :
 	switchToTheme("light");
 	break;
-    case "light-theme" :
+    case "light" :
 	switchToTheme("dark");
 	break;
-    case "dark-theme" :
+    case "dark" :
 	switchToTheme("default");
 	break;
     }
@@ -65,13 +65,13 @@ function initializeTheme() {
 	switchToTheme("default");
     } else {
 	switch (localStorage.getItem("current-theme")) {
-	case "default-theme" :
+	case "default" :
 	    switchToTheme("default");
 	    break;
-	case "light-theme" :
+	case "light" :
 	    switchToTheme("light");
 	    break;
-	case "dark-theme" :
+	case "dark" :
 	    switchToTheme("dark");
 	    break;
 	}
