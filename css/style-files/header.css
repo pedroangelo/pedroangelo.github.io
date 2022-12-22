@@ -1,0 +1,192 @@
+@import "/css/themes.css";
+@import "/css/global-definitions.css";
+
+/* header element, styled as the top bar */
+header {
+    background-color: var(--elevation-color-l1);
+    box-shadow: 0px 3px 3px 0px var(--shadow-color-l1);
+    position: sticky; /* sticks to top when scrolling, doesn't overlap other content */
+    top: 0; /* place on top */
+    z-index: var(--z-index-header); /* place on top of content*/
+}
+
+/* inner header div, where home button / title, navbar and theme picker are */
+header .inner-header {
+    overflow: hidden; /* allows dropdown menu to appear outside header */
+}
+
+/* NAV BAR */
+
+/* navigation bar to the right of logo */
+header nav.navbar {
+    float: left; /* float bar to the left */
+}
+
+/* dropdown container, containing the navbar link as well as all sublinks */
+header .dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* dropdown content, containing sublinks */
+.navbar .dropdown .dropdown-content {
+    background-color: var(--elevation-color-l2);
+    box-shadow: 0px 3px 3px 0px var(--shadow-color-l2);
+    color: var(--text-color-me);
+    display: none; /* hidden by default, until hovered */
+    position: absolute; /* needed so it doesn't increase size of header */
+    top: 55px; /* place just below navbar link*/
+}
+
+/* show the dropdown menu on hover */
+header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* HYPERLINKS */
+
+/* all header links */
+/* header logo: #header-logo */
+/* navbar links: .navbar > a and .navbar .dropdown > a */
+/* dropdown content links: .dropdown-contents > a */
+header a {
+    line-height: 25px;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none; /* remove underline usual in links */
+}
+
+/* header logo links */
+header #header-logo {
+    color: var(--text-color-he);
+    float: left; /* links group side by side starting on the left */
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px 45% 0px 2%;
+}
+
+/* navbar links */
+header .navbar > a,
+header .navbar .dropdown > a {
+    border-bottom: 3px solid var(--elevation-color-l1); /* prevent hovering from increasing size of header */
+    border-top: 3px solid var(--elevation-color-l1); /* prevent hovering from increasing size of header */
+    color: var(--text-color-me);
+    float: left; /* links group side by side starting on the left */
+    font-size: 18px;
+}
+
+/* navbar links on active */
+header .navbar > a.active,
+header .navbar .dropdown > a.active {
+    border-top: 3px solid var(--highlight-color-p);
+    color: var(--text-color-he);
+}
+
+/* navbar links on hover */
+header .navbar > a:hover {
+    color: var(--text-color-he);
+}
+
+/* navbar links on hover */
+header .navbar .dropdown:hover > a {
+    background-color: var(--elevation-color-l2);
+    border-bottom: 3px solid var(--elevation-color-l2);
+    border-top: 3px solid var(--elevation-color-l2);
+    color: var(--text-color-he);
+}
+
+/* navbar links on hover and active */
+header .navbar .dropdown:hover > a.active {
+    border-top: 3px solid var(--highlight-color-p);
+}
+
+/* dropdown content links */
+header .dropdown-content > a {
+    color: var(--text-color-me);
+    display: block; /* arrange items vertically */
+}
+
+/* dropdown content links on active */
+header .dropdown-content > a.active {
+    color: var(--text-color-he);
+}
+
+/* dropdown content links on hover */
+header .dropdown-content > a:hover {
+    background-color: var(--elevation-color-l3);
+    color: var(--text-color-he);
+}
+
+/* THEME PICKER */
+
+/* theme picker container */
+header div#theme-picker {
+    float: right;
+    overflow: hidden;
+}
+
+/* button containing icon */
+header div#theme-picker button.theme-button {
+    background-color: var(--elevation-color-l1);
+    border: 0px; /* remove standard button border */
+    color: var(--text-color-me);
+    font-size: 20px;
+    line-height: 25px;
+    padding: 15px 12px 11px 12px;
+    text-align: center;
+}
+
+/* google material icon definitions */
+header div#theme-picker .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 24;
+}
+
+/* theme options list, containing individual theme pickers */
+header div#theme-picker div.theme-options {
+    background-color: var(--elevation-color-l2);
+    box-shadow: 0px 3px 3px 0px var(--shadow-color-l2);
+    display: none; /* hidden by default, until hovered */
+    position: absolute; /* needed so it doesn't increase size of header */
+    right: 0px;
+    top: 55px; /* place just below navbar link*/
+}
+
+/* theme picker button on hover */
+header div#theme-picker:hover button.theme-button {
+    background-color: var(--elevation-color-l2);
+}
+    
+/* show theme options on hover */
+header div#theme-picker:hover div.theme-options {
+    display: block;
+}
+
+/* individual pick theme button */
+header div#theme-picker div.theme-options button.pick-theme {
+    background-color: var(--elevation-color-l2);
+    border: 0px; /* remove standard button border */
+    cursor: pointer; /* change pointer */
+    color: var(--text-color-me);
+    display: block; /* keep orientation with the navbar links*/
+    font-size: 18px;
+    line-height: 25px;
+    padding: 12px 12px;
+    text-align: left;
+    width: 100%;
+}
+
+/* individual theme options pick theme button icon */
+header div#theme-picker div.theme-options button.pick-theme span.theme-icon {
+    float: left;
+    margin: 0px 8px 0px 0px;
+}
+
+/* individual theme options pick theme button icon on hover */
+header div#theme-picker div.theme-options button.pick-theme:hover {
+    background-color: var(--elevation-color-l3);
+}
+
+/* individual theme options pick theme button icon on active */
+header div#theme-picker div.theme-options button.pick-theme.active {
+    color: var(--text-color-he);
+}

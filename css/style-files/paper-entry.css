@@ -1,0 +1,33 @@
+@import "/css/themes.css";
+@import "/css/global-definitions.css";
+
+/* paper entry iteration buttons */
+.paper-entry div.paper-iteration a,
+.paper-entry div.paper-iteration button {
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 20px;
+    color: var(--text-color-me);
+    font-size: 14px;
+    margin: 0px auto;
+    padding: 12px 16px 12px 12px;
+    text-decoration: none; /* remove underline usual in links */
+}
+
+/* paper entry iteration button icon */
+.paper-entry div.paper-iteration a span,
+.paper-entry div.paper-iteration button span {
+    margin: 0px 8px 0px 0px;
+}
+
+/* google material icon definitions */
+.paper-entry div.paper-iteration .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 24;
+}
+
+/* paper entry iteration buttons */
+.paper-entry div.paper-iteration a:hover,
+.paper-entry div.paper-iteration button:hover {
+    background-color: var(--elevation-color-l2);
+    color: var(--text-color-he);
+}

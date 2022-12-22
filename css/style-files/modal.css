@@ -1,0 +1,46 @@
+@import "/css/themes.css";
+@import "/css/global-definitions.css";
+
+/* modal background */
+div.modal {
+    display: none; /* hidden by default */
+    position: fixed; /* stay in place */
+    z-index: var(--z-index-modal); /* sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* full width */
+    height: 100%; /* full height */
+    overflow: auto; /* enable scroll if needed */
+    background-color: var(--dark-gray-transparent); /* Black w/ opacity */
+}
+
+/* modal content box */
+div.modal div.modal-content {
+    background-color: var(--elevation-color-l2);
+    color: var(--text-color-he);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 3px solid var(--elevation-color-l1);
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 200px;
+    overflow: scroll; /* hide text overflowing but allow scroll */
+}
+
+/* The Close Button */
+div.modal div.modal-content .close {
+    color: var(--text-color-he);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+div.modal div.modal-content .close:hover,
+div.modal div.modal-content .close:focus {
+    color: var(--highlight-color-p);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.modal div.modal-content p {
+    white-space: pre-wrap; /* wrap text to fit box, preserve whitespace */
+}

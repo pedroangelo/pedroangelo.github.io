@@ -1,210 +1,23 @@
-@import "/css/theme.css";
-@import "/css/z-index.css";
+@import "/css/themes.css";
+@import "/css/global-definitions.css";
 
-/* BODY */
+/* header style */
+@import "/css/style-files/header.css";
+
+/* paper entry */
+@import "/css/style-files/paper-entry.css";
+
+/* modal for .bib and abstract */
+@import "/css/style-files/modal.css";
+
+/* page style */
 
 body {
-    margin: 0px;
     background-color: var(--background-color);
-    font-family: Arial, Helvetica, sans-serif; /* font Arial, fall back on Helvetica */
     color: var(--text-color-he);
+    font-family: Arial, Helvetica, sans-serif; /* font Arial, fall back on Helvetica */
+    margin: 0px;
 }
-
-/* END BODY */
-
-/* HEADER */
-
-/* header element, styled as the top bar */
-header {
-  position: sticky; /* sticks to top when scrolling, doesn't overlap other content */
-  top: 0; /* place on top */
-  background-color: var(--elevation-color-l1);
-  z-index: var(--z-index-header); /* place on top of content*/
-  box-shadow: 0px 3px 3px 0px var(--shadow-color-l1);
-}
-
-/* inner header div, where home button / title, navbar and theme picker are */
-header .inner-header {
-  overflow: hidden; /* allows dropdown menu to appear outside header */
-}
-
-/* NAV BAR */
-
-/* navigation bar to the right of logo */
-header nav.navbar {
-  float: left; /* float bar to the left */
-}
-
-/* dropdown container, containing the navbar link as well as all sublinks */
-header .dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* dropdown content, containing sublinks */
-.navbar .dropdown .dropdown-content {
-  display: none; /* hidden by default, until hovered */
-  position: absolute; /* needed so it doesn't increase size of header */
-  top: 55px; /* place just below navbar link*/
-  background-color: var(--elevation-color-l2);
-  color: var(--text-color-me);
-  box-shadow: 0px 3px 3px 0px var(--shadow-color-l2);
-}
-
-/* show the dropdown menu on hover */
-header .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* HYPERLINKS */
-
-/* all header links */
-/* header logo: #header-logo */
-/* navbar links: .navbar > a and .navbar .dropdown > a */
-/* dropdown content links: .dropdown-contents > a */
-header a {
-  text-align: center;
-  padding: 12px 12px;
-  text-decoration: none; /* remove underline usual in links */
-  line-height: 25px;
-}
-
-/* header logo links */
-header #header-logo {
-  color: var(--text-color-he);
-  font-size: 25px;
-  font-weight: bold;
-  float: left; /* links group side by side starting on the left */
-  margin: 0px 45% 0px 2%;
-}
-
-/* navbar links */
-header .navbar > a,
-header .navbar .dropdown > a {
-  float: left; /* links group side by side starting on the left */
-  color: var(--text-color-me);
-  font-size: 18px;
-  border-top: 3px solid var(--elevation-color-l1); /* prevent hovering from increasing size of header */
-  border-bottom: 3px solid var(--elevation-color-l1); /* prevent hovering from increasing size of header */
-}
-
-/* navbar links on active */
-header .navbar > a.active,
-header .navbar .dropdown > a.active {
-  color: var(--text-color-he);
-  border-top: 3px solid var(--highlight-color-p);
-}
-
-/* navbar links on hover */
-header .navbar > a:hover {
-  color: var(--text-color-he);
-}
-
-/* navbar links on hover */
-header .navbar .dropdown:hover > a {
-  color: var(--text-color-he);
-  background-color: var(--elevation-color-l2);
-  border-top: 3px solid var(--elevation-color-l2);
-  border-bottom: 3px solid var(--elevation-color-l2);
-}
-
-/* navbar links on hover and active */
-header .navbar .dropdown:hover > a.active {
-  border-top: 3px solid var(--highlight-color-p);
-}
-
-/* dropdown content links */
-header .dropdown-content > a {
-  display: block; /* arrange items vertically */
-  color: var(--text-color-me);
-}
-
-/* dropdown content links on active */
-header .dropdown-content > a.active {
-  color: var(--text-color-he);
-}
-
-/* dropdown content links on hover */
-header .dropdown-content > a:hover {
-  color: var(--text-color-he);
-  background-color: var(--elevation-color-l3);
-}
-
-/* THEME PICKER */
-
-/* theme picker container */
-header div#theme-picker {
-    float: right;
-    overflow: hidden;
-}
-
-/* button containing icon */
-header div#theme-picker button.theme-button {
-  text-align: center;
-  padding: 15px 12px 11px 12px;
-  line-height: 25px;
-  font-size: 20px;
-  border: 0px; /* remove standard button border */
-  background-color: var(--elevation-color-l1);
-  color: var(--text-color-me);
-}
-/* google material icon definitions */
-header div#theme-picker .material-symbols-outlined {
-    font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 40;
-}
-
-/* theme options list, containing individual theme pickers */
-header div#theme-picker div.theme-options {
-  display: none; /* hidden by default, until hovered */
-  position: absolute; /* needed so it doesn't increase size of header */
-  top: 55px; /* place just below navbar link*/
-  right: 0px;
-  background-color: var(--elevation-color-l2);
-  box-shadow: 0px 3px 3px 0px var(--shadow-color-l2);
-}
-
-/* theme picker button on hover */
-header div#theme-picker:hover button.theme-button {
-    background-color: var(--elevation-color-l2);
-}
-    
-/* show theme options on hover */
-header div#theme-picker:hover div.theme-options {
-    display: block;
-}
-
-/* individual pick theme button */
-header div#theme-picker div.theme-options button.pick-theme {
-  display: block; /* keep orientation with the navbar links*/
-  cursor: pointer; /* change pointer */
-  text-align: center;
-  padding: 12px 12px;
-  line-height: 25px;
-  font-size: 18px;
-  border: 0px; /* remove standard button border */
-  background-color: var(--elevation-color-l2);
-  color: var(--text-color-me);
-  width: 100%;
-  text-align: left;
-}
-
-/* individual theme options pick theme button icon */
-header div#theme-picker div.theme-options button.pick-theme span.theme-icon {
-    float: left;
-    margin: 0px 5px 0px 0px;
-}
-
-/* individual theme options pick theme button icon on hover */
-header div#theme-picker div.theme-options button.pick-theme:hover {
-  background-color: var(--elevation-color-l3);
-}
-
-/* individual theme options pick theme button icon on active */
-header div#theme-picker div.theme-options button.pick-theme.active {
-  color: var(--text-color-he);
-}
-
-/* END HEADER */
 
 main {
   margin: 40px;
@@ -218,50 +31,4 @@ main a:link {
 /* visited link */
 main a:visited {
   color: var(--highlight-color-s);
-}
-
-/* MODAL FOR .BIB AND ABSTRACT */
-
-/* modal background */
-div.modal {
-    display: none; /* hidden by default */
-    position: fixed; /* stay in place */
-    z-index: var(--z-index-modal); /* sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* full width */
-    height: 100%; /* full height */
-    overflow: auto; /* enable scroll if needed */
-    background-color: var(--dark-gray-transparent); /* Black w/ opacity */
-}
-
-/* modal content box */
-div.modal div.modal-content {
-    background-color: var(--elevation-color-l2);
-    color: var(--text-color-he);
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 3px solid var(--elevation-color-l1);
-    width: 50%; /* Could be more or less, depending on screen size */
-    height: 200px;
-    overflow: scroll; /* hide text overflowing but allow scroll */
-}
-
-/* The Close Button */
-div.modal div.modal-content .close {
-    color: var(--text-color-he);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-div.modal div.modal-content .close:hover,
-div.modal div.modal-content .close:focus {
-    color: var(--highlight-color-p);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-div.modal div.modal-content p {
-    white-space: pre-wrap; /* wrap text to fit box, preserve whitespace */
 }
