@@ -3,27 +3,26 @@
 
 /* modal background */
 div.modal {
+    background-color: var(--dark-gray-transparent); /* Black w/ opacity */
     display: none; /* hidden by default */
-    position: fixed; /* stay in place */
-    z-index: var(--z-index-modal); /* sit on top */
+    height: 100%; /* full height */
     left: 0;
+    overflow: hidden; /* enable scroll if needed */
+    position: fixed; /* stay in place */
     top: 0;
     width: 100%; /* full width */
-    height: 100%; /* full height */
-    overflow: auto; /* enable scroll if needed */
-    background-color: var(--dark-gray-transparent); /* Black w/ opacity */
+    z-index: var(--z-index-modal); /* sit on top */
 }
 
 /* modal content box */
 div.modal div.modal-content {
     background-color: var(--elevation-color-l2);
+    border-radius: 15px;
     color: var(--text-color-he);
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 3px solid var(--elevation-color-l1);
-    width: 50%; /* Could be more or less, depending on screen size */
-    height: 200px;
+    margin: 10% auto; /* 15% from the top and centered */
     overflow: scroll; /* hide text overflowing but allow scroll */
+    padding: 20px;
+    width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -41,6 +40,33 @@ div.modal div.modal-content .close:focus {
     cursor: pointer;
 }
 
-div.modal div.modal-content p {
+div.modal div.modal-content div.modal-content-body {
+    background-color: var(--elevation-color-l3);
+    border-radius: 15px;
+    height: 250px;
+    margin: 10px 0px;
+    overflow: scroll;
+    padding: 0px 15px;
     white-space: pre-wrap; /* wrap text to fit box, preserve whitespace */
+}
+
+/* paper entry iteration buttons */
+div.modal div.modal-content div.modal-content-footer button {
+    display: inline-block;
+    background-color: var(--elevation-color-l2);
+    border: 0px; /* remove standard button border */
+    border-radius: 20px;
+    color: var(--text-color-me);
+    cursor: pointer; /* change pointer */
+}
+
+/* paper entry iteration buttons */
+div.modal div.modal-content div.modal-content-footer button:hover {
+    background-color: var(--elevation-color-l3);
+    color: var(--text-color-he);
+}
+
+/* google material icon definitions */
+div.modal div.modal-content div.modal-content-footer .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 24;
 }

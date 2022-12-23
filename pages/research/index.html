@@ -127,11 +127,14 @@ abstract
 
 <div class="modal">
 <div class="modal-content">
+
+<div class="modal-content-header">
+<h2>Abstract</h2>
 <span class="close" onclick="hideModalFromChild(this)">&times;</span>
-<button onclick="copyBib(this)">copy</button>
-<button onclick="downloadBib(this)">download</button>
-<button onclick="hideModalFromChild(this)">close</button>
-<p>@InProceedings{angelo2022type,
+</div>
+
+<div class="modal-content-body">
+@InProceedings{angelo2022type,
     author="{\^A}ngelo, Pedro and Florido, M{\'a}rio",
     editor="Seidl, Helmut and Liu, Zhiming and Pasareanu, Corina S.",
     title="Type Inference for Rank-2 Intersection Types Using Set Unification",
@@ -144,7 +147,21 @@ abstract
     isbn="978-3-031-17715-6",
     url = {https://doi.org/10.1007/978-3-031-17715-6_29},
     doi = {10.1007/978-3-031-17715-6_29}
-}</p>
+}
+</div>
+
+<div class="modal-content-footer">
+<button onclick="copyBib(this)">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+
+<button onclick="downloadBib(this)">
+<span class="material-symbols-outlined">download</span>
+</button>
+
+<button onclick="hideModalFromChild(this)">close</button>
+</div>
+
 </div>
 </div>
 
