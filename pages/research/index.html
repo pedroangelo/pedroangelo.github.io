@@ -129,8 +129,10 @@ abstract
 <div class="modal-content">
 
 <div class="modal-content-header">
-<h2>Abstract</h2>
-<span class="close" onclick="hideModalFromChild(this)">&times;</span>
+Cite
+<button onclick="hideModalFromChild(this)">
+<span class="material-symbols-outlined">close</span>
+</button>
 </div>
 
 <div class="modal-content-body">
@@ -153,13 +155,17 @@ abstract
 <div class="modal-content-footer">
 <button onclick="copyBib(this)">
 <span class="material-symbols-outlined">content_copy</span>
+copy
 </button>
 
 <button onclick="downloadBib(this)">
 <span class="material-symbols-outlined">download</span>
+download
 </button>
 
-<button onclick="hideModalFromChild(this)">close</button>
+<button onclick="hideModalFromChild(this)">
+<span class="material-symbols-outlined">close</span>
+close</button>
 </div>
 
 </div>
@@ -213,11 +219,16 @@ abstract
 
 <div class="modal">
 <div class="modal-content">
-<span class="close" onclick="hideModalFromChild(this)">&times;</span>
-<button onclick="copyBib(this)">copy</button>
-<button onclick="downloadBib(this)">download</button>
-<button onclick="hideModalFromChild(this)">close</button>
-<p>@inproceedings{angelo2022typed,
+
+<div class="modal-content-header">
+Cite
+<button onclick="hideModalFromChild(this)">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+
+<div class="modal-content-body">
+@inproceedings{angelo2022typed,
     author = {\^{A}ngelo, Pedro and Florido, M\'{a}rio},
     title = {A Typed Lambda Calculus with Gradual Intersection Types},
     year = {2022},
@@ -233,7 +244,25 @@ abstract
     keywords = {intersection types, gradual typing, typed lambda calculus},
     location = {Tbilisi, Georgia},
     series = {PPDP '22}
-}</p>
+}
+</div>
+
+<div class="modal-content-footer">
+<button onclick="copyBib(this)">
+<span class="material-symbols-outlined">content_copy</span>
+copy
+</button>
+
+<button onclick="downloadBib(this)">
+<span class="material-symbols-outlined">download</span>
+download
+</button>
+
+<button onclick="hideModalFromChild(this)">
+<span class="material-symbols-outlined">close</span>
+close</button>
+</div>
+
 </div>
 </div>
 
@@ -278,11 +307,16 @@ abstract
 
 <div class="modal">
 <div class="modal-content">
-<span class="close" onclick="hideModalFromChild(this)">&times;</span>
-<button onclick="copyBib(this)">copy</button>
-<button onclick="downloadBib(this)">download</button>
-<button onclick="hideModalFromChild(this)">close</button>
-<p>@InProceedings{angelo2020type,
+
+<div class="modal-content-header">
+Cite
+<button onclick="hideModalFromChild(this)">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+
+<div class="modal-content-body">
+@InProceedings{angelo2020type,
     author="{\^A}ngelo, Pedro and Florido, M{\'a}rio",
     editor="Bowman, William J. and Garcia, Ronald",
     title="Type Inference for Rank 2 Gradual Intersection Types",
@@ -294,7 +328,25 @@ abstract
     abstract="In this paper, we extend a rank 2 intersection type system with gradual types. We then show that the problem of finding a principal typing for a lambda term, in a rank 2 gradual intersection type system is decidable. We present a type inference algorithm which builds the principal typing of a term through the generation of type constraints which are solved by a new extended unification algorithm constructing the most general unifier for rank 2 gradual intersection types.",
     isbn="978-3-030-47147-7",
     doi = {10.1007/978-3-030-47147-7_5}
-}</p>
+}
+</div>
+
+<div class="modal-content-footer">
+<button onclick="copyBib(this)">
+<span class="material-symbols-outlined">content_copy</span>
+copy
+</button>
+
+<button onclick="downloadBib(this)">
+<span class="material-symbols-outlined">download</span>
+download
+</button>
+
+<button onclick="hideModalFromChild(this)">
+<span class="material-symbols-outlined">close</span>
+close</button>
+</div>
+
 </div>
 </div>
 

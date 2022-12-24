@@ -65,7 +65,7 @@ function hideAllModal() {
 // copy .bib file contents
 function copyBib(object) {
     // get .bib file contents from .modal-content p element
-    let modalContent = object.closest('.modal-content').querySelector('p');;
+    let modalContent = object.closest('.modal-content').querySelector('div.modal-content-body');
     // obtain inner html from element
     let bibText = modalContent.innerHTML;
     // copy to clipboard
@@ -87,7 +87,7 @@ function populateModal(paperReference) {
     // get selected modal
     let modal = getModal(paperReference);
     // get modal text element
-    let modalText = modal.querySelector("div.modal-content p");
+    let modalText = modal.querySelector("div.modal-content div.modal-content-body");
     // get bib file contents
     let content = paperReference;
     // write contents

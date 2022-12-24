@@ -17,40 +17,70 @@ div.modal {
 /* modal content box */
 div.modal div.modal-content {
     background-color: var(--elevation-color-l2);
-    border-radius: 15px;
-    color: var(--text-color-he);
+    border-radius: 20px;
     margin: 10% auto; /* 15% from the top and centered */
     overflow: scroll; /* hide text overflowing but allow scroll */
-    padding: 20px;
-    width: 50%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
-div.modal div.modal-content .close {
+/* MODAL CONTENT HEADER */
+
+/* modal content header */
+div.modal div.modal-content div.modal-content-header {
     color: var(--text-color-he);
+    font-size: 30px;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+/* close button */
+div.modal div.modal-content div.modal-content-header button {
+    background-color: var(--elevation-color-l2);
+    border: 0px;
+    color: var(--text-color-me);
+    cursor: pointer; /* change pointer */
     float: right;
-    font-size: 28px;
-    font-weight: bold;
 }
 
-div.modal div.modal-content .close:hover,
-div.modal div.modal-content .close:focus {
-    color: var(--highlight-color-p);
-    text-decoration: none;
-    cursor: pointer;
+/* close button icon */
+div.modal div.modal-content div.modal-content-header button span {
+    font-size: 30px;
 }
 
+/* google material icon definitions */
+div.modal div.modal-content div.modal-content-header .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 24;
+}
+
+/* close button on hover */
+div.modal div.modal-content div.modal-content-header button:hover {
+    color: var(--text-color-he);
+}
+
+/* END MODAL CONTENT HEADER */
+
+/* MODAL CONTENT BODY */ 
+
+/* modal content body */
 div.modal div.modal-content div.modal-content-body {
     background-color: var(--elevation-color-l3);
-    border-radius: 15px;
     height: 250px;
-    margin: 10px 0px;
     overflow: scroll;
     padding: 0px 15px;
     white-space: pre-wrap; /* wrap text to fit box, preserve whitespace */
 }
 
-/* paper entry iteration buttons */
+/* END MODAL CONTENT BODY */ 
+
+/* MODAL CONTENT FOOTER */
+
+/* modal content footer */
+div.modal div.modal-content div.modal-content-footer {
+    text-align: right;
+    /* padding: 5px 0px; */
+}
+
+/* modal content footer iteration buttons */
 div.modal div.modal-content div.modal-content-footer button {
     display: inline-block;
     background-color: var(--elevation-color-l2);
@@ -58,15 +88,28 @@ div.modal div.modal-content div.modal-content-footer button {
     border-radius: 20px;
     color: var(--text-color-me);
     cursor: pointer; /* change pointer */
+    font-size: 16px;
+    padding: 10px 16px 10px 12px;
+    text-align: left;
+    text-decoration: none; /* remove underline usual in links */
 }
 
-/* paper entry iteration buttons */
-div.modal div.modal-content div.modal-content-footer button:hover {
-    background-color: var(--elevation-color-l3);
-    color: var(--text-color-he);
+/* modal content footer iteration button icon */
+div.modal div.modal-content div.modal-content-footer button span {
+    float: left;
+    font-size: 20px;
+    margin: 0px 8px 0px 0px;
 }
 
 /* google material icon definitions */
 div.modal div.modal-content div.modal-content-footer .material-symbols-outlined {
     font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 24;
 }
+
+/* modal content footer iteration button on hover */
+div.modal div.modal-content div.modal-content-footer button:hover {
+    /* background-color: var(--elevation-color-l4); */
+    color: var(--text-color-he);
+}
+
+/* END MODAL CONTENT FOOTER */
