@@ -85,17 +85,6 @@ Pedro Ângelo, <a href="https://sigarra.up.pt/fcup/pt/func_geral.formview?p_codi
 Type Inference for Rank-2 Intersection Types Using Set Unification.
 ICTAC 2022.
 </p>
-<p>
-Several type inference approaches for rank-2 idempotent and commutative intersection types have been presented in the literature.
-Type inference relies on two stages: type constraint generation and solving.
-Defining constraint generation rules is rather straightforward, with one exception.
-To infer the type of an application, several derivations of the argument are required, one for each instance of the domain type of the function.
-The types of these derivations are then constrained against the instances.
-Noting that these derivations are isomorphic, by renaming of type variables, they can be obtained via a duplication operation on a single derivation of the argument.
-The application rule then constrains the intersection type resulting from duplication against the domain type of the function, resulting in an equality constraint between intersections.
-By treating intersections as sets, these constraints can be solved by solving a set unification problem, thus ensuring the types of the argument unify with the domain type of the function.
-Here we present a new type inference algorithm for rank-2 intersection types, which relies on set unification to solve equality constraints between intersections, and show it is both sound and complete.
-</p>
 
 <p>
 <div class="paper-iteration">
@@ -114,12 +103,12 @@ pdf
 pdf (extended) 
 </a>
 
-<button onclick="showModalFromChild(this)">
+<button onclick="showModalFromChild(this); toggleTabFromChild(this,'cite')">
 <span class="material-symbols-outlined">format_quote</span>
 cite
 </button>
 
-<button onclick="showModalFromChild(this)">
+<button onclick="showModalFromChild(this); toggleTabFromChild(this,'abstract')">
 <span class="material-symbols-outlined">description</span>
 abstract
 </button>
@@ -129,11 +118,11 @@ abstract
 <div class="modal-container">
 
 <div class="modal-tab-picker">
-<button onclick="toggleTabFromChild(this,'cite')">
+<button class="cite" onclick="toggleTabFromChild(this,'cite')">
 Cite
 </button>
 
-<button onclick="toggleTabFromChild(this,'abstract')">
+<button class="abstract" onclick="toggleTabFromChild(this,'abstract')">
 Abstract
 </button>
 
@@ -183,7 +172,6 @@ Several type inference approaches for rank-2 idempotent and commutative intersec
 <span class="material-symbols-outlined">content_copy</span>
 copy
 </button>
-
 </div>
 </div>
 
@@ -201,14 +189,6 @@ A Typed Lambda Calculus with Gradual Intersection Types.
 PPDP 2022.
 </p>
 <p>
-Intersection types have the power to type expressions which are all of many different types.
-Gradual types combine type checking at both compile-time and run-time.
-Here we combine these two approaches in a new typed calculus that harness both of their strengths.
-We incorporate these two contributions in a single typed calculus and define an operational semantics with type cast annotations.
-We also prove several crucial properties of the type system, namely that types are preserved during compilation and evaluation, and that the refined criteria for gradual typing holds.
-</p>
-
-<p>
 <div class="paper-iteration">
 <a href="https://doi.org/10.1145/3551357.3551382" target="_blank">
 <span class="material-symbols-outlined">public</span>
@@ -225,28 +205,36 @@ pdf
 pdf (extended) 
 </a>
 
-<button onclick="showModalFromChild(this)">
+<button onclick="showModalFromChild(this); toggleTabFromChild(this,'cite')">
 <span class="material-symbols-outlined">format_quote</span>
 cite
 </button>
 
-<button onclick="showModalFromChild(this)">
+<button onclick="showModalFromChild(this); toggleTabFromChild(this,'abstract')">
 <span class="material-symbols-outlined">description</span>
 abstract
 </button>
 </div>
 
 <div class="modal">
-<div class="modal-content">
+<div class="modal-container">
 
-<div class="modal-content-header">
+<div class="modal-tab-picker">
+<button class="cite" onclick="toggleTabFromChild(this,'cite')">
 Cite
+</button>
+
+<button class="abstract" onclick="toggleTabFromChild(this,'abstract')">
+Abstract
+</button>
+
 <button onclick="hideModalFromChild(this)">
 <span class="material-symbols-outlined">close</span>
 </button>
 </div>
 
-<div class="modal-content-body">
+<div class="modal-tab-content cite">
+<div class="modal-tab-content-body">
 @inproceedings{angelo2022typed,
     author = {\^{A}ngelo, Pedro and Florido, M\'{a}rio},
     title = {A Typed Lambda Calculus with Gradual Intersection Types},
@@ -266,8 +254,8 @@ Cite
 }
 </div>
 
-<div class="modal-content-footer">
-<button onclick="copyBib(this)">
+<div class="modal-tab-content-footer">
+<button onclick="copyContents(this)">
 <span class="material-symbols-outlined">content_copy</span>
 copy
 </button>
@@ -276,10 +264,20 @@ copy
 <span class="material-symbols-outlined">download</span>
 download
 </button>
+</div>
+</div>
 
-<button onclick="hideModalFromChild(this)">
-<span class="material-symbols-outlined">close</span>
-close</button>
+<div class="modal-tab-content abstract">
+<div class="modal-tab-content-body">
+Intersection types have the power to type expressions which are all of many different types. Gradual types combine type checking at both compile-time and run-time. Here we combine these two approaches in a new typed calculus that harness both of their strengths. We incorporate these two contributions in a single typed calculus and define an operational semantics with type cast annotations. We also prove several crucial properties of the type system, namely that types are preserved during compilation and evaluation, and that the refined criteria for gradual typing holds.
+</div>
+
+<div class="modal-tab-content-footer">
+<button onclick="copyContents(this)">
+<span class="material-symbols-outlined">content_copy</span>
+copy
+</button>
+</div>
 </div>
 
 </div>
@@ -296,12 +294,6 @@ Type Inference for Rank 2 Gradual Intersection Types.
 TFP 2019.
 </p>
 <p>
-In this paper, we extend a rank 2 intersection type system with gradual types.
-We then show that the problem of finding a principal typing for a lambda term, in a rank 2 gradual intersection type system is decidable.
-We present a type inference algorithm which builds the principal typing of a term through the generation of type constraints which are solved by a new extended unification algorithm constructing the most general unifier for rank 2 gradual intersection types.
-</p>
-
-<p>
 <div class="paper-iteration">
 <a href="https://doi.org/10.1007/978-3-030-47147-7_5" target="_blank">
 <span class="material-symbols-outlined">public</span>
@@ -313,28 +305,36 @@ publisher
 pdf
 </a>
 
-<button onclick="showModalFromChild(this)">
+<button onclick="showModalFromChild(this); toggleTabFromChild(this,'cite')">
 <span class="material-symbols-outlined">format_quote</span>
 cite
 </button>
 
-<button onclick="showModalFromChild(this)">
+<button onclick="showModalFromChild(this); toggleTabFromChild(this,'abstract')">
 <span class="material-symbols-outlined">description</span>
 abstract
 </button>
 </div>
 
 <div class="modal">
-<div class="modal-content">
+<div class="modal-container">
 
-<div class="modal-content-header">
+<div class="modal-tab-picker">
+<button class="cite" onclick="toggleTabFromChild(this,'cite')">
 Cite
+</button>
+
+<button class="abstract" onclick="toggleTabFromChild(this,'abstract')">
+Abstract
+</button>
+
 <button onclick="hideModalFromChild(this)">
 <span class="material-symbols-outlined">close</span>
 </button>
 </div>
 
-<div class="modal-content-body">
+<div class="modal-tab-content cite">
+<div class="modal-tab-content-body">
 @InProceedings{angelo2020type,
     author="{\^A}ngelo, Pedro and Florido, M{\'a}rio",
     editor="Bowman, William J. and Garcia, Ronald",
@@ -350,8 +350,8 @@ Cite
 }
 </div>
 
-<div class="modal-content-footer">
-<button onclick="copyBib(this)">
+<div class="modal-tab-content-footer">
+<button onclick="copyContents(this)">
 <span class="material-symbols-outlined">content_copy</span>
 copy
 </button>
@@ -360,10 +360,20 @@ copy
 <span class="material-symbols-outlined">download</span>
 download
 </button>
+</div>
+</div>
 
-<button onclick="hideModalFromChild(this)">
-<span class="material-symbols-outlined">close</span>
-close</button>
+<div class="modal-tab-content abstract">
+<div class="modal-tab-content-body">
+In this paper, we extend a rank 2 intersection type system with gradual types. We then show that the problem of finding a principal typing for a lambda term, in a rank 2 gradual intersection type system is decidable. We present a type inference algorithm which builds the principal typing of a term through the generation of type constraints which are solved by a new extended unification algorithm constructing the most general unifier for rank 2 gradual intersection types.
+</div>
+
+<div class="modal-tab-content-footer">
+<button onclick="copyContents(this)">
+<span class="material-symbols-outlined">content_copy</span>
+copy
+</button>
+</div>
 </div>
 
 </div>

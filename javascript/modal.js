@@ -62,25 +62,33 @@ function hideAllModal() {
 
 // TAB SHOW AND HIDE FUNCTIONS
 
+// toggle active tab
 function toggleTabFromChild(object, tab) {
-    // DEACTIVATE ACTIVE
-
     // get modal
     let modal = getModalFromChild(object);
     // get modal-container
     let modalContainer = modal.querySelector(".modal-container");
+    
     // get active buttons from .modal-tab-picker
     let activeButtons = modalContainer.querySelectorAll(".modal-tab-picker button.active");
     // remove active from all buttons in .modal-tab-picker
     for (let i = 0; i < activeButtons.length; i++) {
-	activeButtons[i].classList.remove = "active";
+	activeButtons[i].classList.remove("active");
     }
+    
     // get active buttons from .modal-tab-picker
     let tabContents = modalContainer.querySelectorAll(".modal-tab-content");
     // hide all .modal-tab-content
     for (let i = 0; i < tabContents.length; i++) {
 	tabContents[i].style.display = "none";
     }
+
+    // get selected button
+    let selectedButton = modalContainer.querySelector(".modal-tab-picker button." + tab);
+    // activate button
+    selectedButton.classList.add("active");
+    // show tab
+    modalContainer.querySelector(".modal-tab-content." + tab).style.display = "block";
 }
 
 // TAB BUTTON ACTION FUNCTIONS

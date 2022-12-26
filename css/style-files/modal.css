@@ -7,7 +7,7 @@ div.modal {
     display: none; /* hidden by default */
     height: 100%; /* full height */
     left: 0;
-    overflow: auto; /* enable scroll if needed */
+    overflow: hidden; /* enable scroll if needed */
     position: fixed; /* stay in place */
     top: 0;
     width: 100%; /* full width */
@@ -27,7 +27,6 @@ div.modal div.modal-container {
 
 /* modal tab picker */
 div.modal div.modal-container div.modal-tab-picker {
-    color: var(--text-color-he);
     font-size: 30px;
     text-align: center;
 }
@@ -62,13 +61,9 @@ div.modal div.modal-container div.modal-tab-picker button:hover {
 }
 
 /* modal tab picker tab buttons on hover */
-div.modal div.modal-container div.modal-tab-picker button:not(:last-of-type):hover {
+div.modal div.modal-container div.modal-tab-picker button.active  {
     background-color: var(--elevation-color-l3);
-}
-
-/* modal tab picker tab buttons on hover */
-div.modal div.modal-container div.modal-tab-picker button:not(:last-of-type).active  {
-    background-color: var(--elevation-color-l3);
+    color: var(--text-color-he);
 }
 
 /* modal tab picker close button icon */
@@ -97,7 +92,7 @@ div.modal div.modal-container div.modal-tab-content-body {
     background-color: var(--elevation-color-l3);
     height: 250px;
     overflow: scroll;
-    padding: 0px 15px;
+    padding: 5px 15px;
     white-space: pre-wrap; /* wrap text to fit box, preserve whitespace */
 }
 
@@ -108,7 +103,6 @@ div.modal div.modal-container div.modal-tab-content-body {
 /* modal content footer */
 div.modal div.modal-container div.modal-tab-content-footer {
     text-align: right;
-    /* padding: 5px 0px; */
 }
 
 /* modal content footer iteration buttons */
