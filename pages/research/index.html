@@ -126,16 +126,24 @@ abstract
 </div>
 
 <div class="modal">
-<div class="modal-content">
+<div class="modal-container">
 
-<div class="modal-content-header">
+<div class="modal-tab-picker">
+<button onclick="toggleTabFromChild(this,'cite')">
 Cite
+</button>
+
+<button onclick="toggleTabFromChild(this,'abstract')">
+Abstract
+</button>
+
 <button onclick="hideModalFromChild(this)">
 <span class="material-symbols-outlined">close</span>
 </button>
 </div>
 
-<div class="modal-content-body">
+<div class="modal-tab-content cite">
+<div class="modal-tab-content-body">
 @InProceedings{angelo2022type,
     author="{\^A}ngelo, Pedro and Florido, M{\'a}rio",
     editor="Seidl, Helmut and Liu, Zhiming and Pasareanu, Corina S.",
@@ -152,8 +160,8 @@ Cite
 }
 </div>
 
-<div class="modal-content-footer">
-<button onclick="copyBib(this)">
+<div class="modal-tab-content-footer">
+<button onclick="copyContents(this)">
 <span class="material-symbols-outlined">content_copy</span>
 copy
 </button>
@@ -162,10 +170,21 @@ copy
 <span class="material-symbols-outlined">download</span>
 download
 </button>
+</div>
+</div>
 
-<button onclick="hideModalFromChild(this)">
-<span class="material-symbols-outlined">close</span>
-close</button>
+<div class="modal-tab-content abstract">
+<div class="modal-tab-content-body">
+Several type inference approaches for rank-2 idempotent and commutative intersection types have been presented in the literature. Type inference relies on two stages: type constraint generation and solving. Defining constraint generation rules is rather straightforward, with one exception. To infer the type of an application, several derivations of the argument are required, one for each instance of the domain type of the function. The types of these derivations are then constrained against the instances. Noting that these derivations are isomorphic, by renaming of type variables, they can be obtained via a duplication operation on a single derivation of the argument. The application rule then constrains the intersection type resulting from duplication against the domain type of the function, resulting in an equality constraint between intersections. By treating intersections as sets, these constraints can be solved by solving a set unification problem, thus ensuring the types of the argument unify with the domain type of the function. Here we present a new type inference algorithm for rank-2 intersection types, which relies on set unification to solve equality constraints between intersections, and show it is both sound and complete.
+</div>
+
+<div class="modal-tab-content-footer">
+<button onclick="copyContents(this)">
+<span class="material-symbols-outlined">content_copy</span>
+copy
+</button>
+
+</div>
 </div>
 
 </div>

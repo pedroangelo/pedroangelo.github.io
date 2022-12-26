@@ -7,15 +7,15 @@ div.modal {
     display: none; /* hidden by default */
     height: 100%; /* full height */
     left: 0;
-    overflow: hidden; /* enable scroll if needed */
+    overflow: auto; /* enable scroll if needed */
     position: fixed; /* stay in place */
     top: 0;
     width: 100%; /* full width */
     z-index: var(--z-index-modal); /* sit on top */
 }
 
-/* modal content box */
-div.modal div.modal-content {
+/* modal container box */
+div.modal div.modal-container {
     background-color: var(--elevation-color-l2);
     border-radius: 20px;
     margin: 10% auto; /* 15% from the top and centered */
@@ -23,46 +23,77 @@ div.modal div.modal-content {
     width: 60%; /* Could be more or less, depending on screen size */
 }
 
-/* MODAL CONTENT HEADER */
+/* MODAL TAB PICKER */
 
-/* modal content header */
-div.modal div.modal-content div.modal-content-header {
+/* modal tab picker */
+div.modal div.modal-container div.modal-tab-picker {
     color: var(--text-color-he);
     font-size: 30px;
-    padding: 5px 0px;
     text-align: center;
 }
 
-/* close button */
-div.modal div.modal-content div.modal-content-header button {
+/* modal tab picker buttons */
+div.modal div.modal-container div.modal-tab-picker button {
     background-color: var(--elevation-color-l2);
     border: 0px;
     color: var(--text-color-me);
     cursor: pointer; /* change pointer */
-    float: right;
+    float: left;
+    line-height: 30px;
+    margin: 0px;
+    padding: 5px;
+    width: 47%;
 }
 
-/* close button icon */
-div.modal div.modal-content div.modal-content-header button span {
-    font-size: 30px;
+/* modal tab picker tab buttons */
+div.modal div.modal-container div.modal-tab-picker button:not(:last-of-type) {
+    font-size: 22px;
+    width: 47%;
 }
 
-/* google material icon definitions */
-div.modal div.modal-content div.modal-content-header .material-symbols-outlined {
-    font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 24;
+/* modal tab picker close button */
+div.modal div.modal-container div.modal-tab-picker button:last-of-type {
+    width: 6%;
 }
 
-/* close button on hover */
-div.modal div.modal-content div.modal-content-header button:hover {
+/* modal tab picker buttons on hover */
+div.modal div.modal-container div.modal-tab-picker button:hover {
     color: var(--text-color-he);
 }
 
-/* END MODAL CONTENT HEADER */
+/* modal tab picker tab buttons on hover */
+div.modal div.modal-container div.modal-tab-picker button:not(:last-of-type):hover {
+    background-color: var(--elevation-color-l3);
+}
 
-/* MODAL CONTENT BODY */ 
+/* modal tab picker tab buttons on hover */
+div.modal div.modal-container div.modal-tab-picker button:not(:last-of-type).active  {
+    background-color: var(--elevation-color-l3);
+}
+
+/* modal tab picker close button icon */
+div.modal div.modal-container div.modal-tab-picker button:last-of-type span {
+    font-size: 26px;
+    vertical-align: middle;
+}
+
+/* google material icon definitions */
+div.modal div.modal-container div.modal-tab-picker .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 24;
+}
+
+/* END MODAL TAB PICKER */
+
+/* MODAL TAB CONTENT */
+
+div.modal div.modal-container div.modal-tab-content {
+    display: none;
+}
+
+/* MODAL TAB CONTENT BODY */ 
 
 /* modal content body */
-div.modal div.modal-content div.modal-content-body {
+div.modal div.modal-container div.modal-tab-content-body {
     background-color: var(--elevation-color-l3);
     height: 250px;
     overflow: scroll;
@@ -70,18 +101,18 @@ div.modal div.modal-content div.modal-content-body {
     white-space: pre-wrap; /* wrap text to fit box, preserve whitespace */
 }
 
-/* END MODAL CONTENT BODY */ 
+/* END MODAL TAB CONTENT BODY */ 
 
-/* MODAL CONTENT FOOTER */
+/* MODAL TAB CONTENT FOOTER */
 
 /* modal content footer */
-div.modal div.modal-content div.modal-content-footer {
+div.modal div.modal-container div.modal-tab-content-footer {
     text-align: right;
     /* padding: 5px 0px; */
 }
 
 /* modal content footer iteration buttons */
-div.modal div.modal-content div.modal-content-footer button {
+div.modal div.modal-container div.modal-tab-content-footer button {
     display: inline-block;
     background-color: var(--elevation-color-l2);
     border: 0px; /* remove standard button border */
@@ -95,21 +126,23 @@ div.modal div.modal-content div.modal-content-footer button {
 }
 
 /* modal content footer iteration button icon */
-div.modal div.modal-content div.modal-content-footer button span {
+div.modal div.modal-container div.modal-tab-content-footer button span {
     float: left;
     font-size: 20px;
     margin: 0px 8px 0px 0px;
 }
 
 /* google material icon definitions */
-div.modal div.modal-content div.modal-content-footer .material-symbols-outlined {
+div.modal div.modal-container div.modal-tab-content-footer .material-symbols-outlined {
     font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 24;
 }
 
 /* modal content footer iteration button on hover */
-div.modal div.modal-content div.modal-content-footer button:hover {
+div.modal div.modal-container div.modal-tab-content-footer button:hover {
     /* background-color: var(--elevation-color-l4); */
     color: var(--text-color-he);
 }
 
-/* END MODAL CONTENT FOOTER */
+/* END MODAL TAB CONTENT FOOTER */
+
+/* END MODAL TAB CONTENT */

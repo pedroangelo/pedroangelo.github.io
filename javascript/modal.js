@@ -24,7 +24,7 @@ function getModalFromChild(object) {
     return getModal(paperReference);
 }
 
-// SHOW AND HIDE FUNCTIONS
+// MODAL SHOW AND HIDE FUNCTIONS
 
 // show selected modal
 function showModal(reference) {
@@ -60,16 +60,39 @@ function hideAllModal() {
     }
 }
 
-// BUTTON ACTION FUNCTIONS
+// TAB SHOW AND HIDE FUNCTIONS
 
-// copy .bib file contents
-function copyBib(object) {
-    // get .bib file contents from .modal-content p element
-    let modalContent = object.closest('.modal-content').querySelector('div.modal-content-body');
+function toggleTabFromChild(object, tab) {
+    // DEACTIVATE ACTIVE
+
+    // get modal
+    let modal = getModalFromChild(object);
+    // get modal-container
+    let modalContainer = modal.querySelector(".modal-container");
+    // get active buttons from .modal-tab-picker
+    let activeButtons = modalContainer.querySelectorAll(".modal-tab-picker button.active");
+    // remove active from all buttons in .modal-tab-picker
+    for (let i = 0; i < activeButtons.length; i++) {
+	activeButtons[i].classList.remove = "active";
+    }
+    // get active buttons from .modal-tab-picker
+    let tabContents = modalContainer.querySelectorAll(".modal-tab-content");
+    // hide all .modal-tab-content
+    for (let i = 0; i < tabContents.length; i++) {
+	tabContents[i].style.display = "none";
+    }
+}
+
+// TAB BUTTON ACTION FUNCTIONS
+
+// copy tab-content body contents
+function copyContents(object) {
+    // get tab contents
+    let modalTabContent = object.closest('.modal-tab-content').querySelector('.modal-tab-content-body');
     // obtain inner html from element
-    let bibText = modalContent.innerHTML;
+    let content = modalTabContent.innerHTML;
     // copy to clipboard
-    navigator.clipboard.writeText(bibText);
+    navigator.clipboard.writeText(content);
 }
 
 // download .bib file
@@ -82,18 +105,6 @@ function downloadBib(object) {
 
 // INITIALIZATION FUNCTONS
 
-// fill modal with information
-function populateModal(paperReference) {
-    // get selected modal
-    let modal = getModal(paperReference);
-    // get modal text element
-    let modalText = modal.querySelector("div.modal-content div.modal-content-body");
-    // get bib file contents
-    let content = paperReference;
-    // write contents
-    modalText.innerHTML = content;
-}
-
 // initialize modals
 function initializeModals() {
     // get paper references
@@ -105,4 +116,18 @@ function initializeModals() {
 	// add event listener to close modal on click
 	window.addEventListener('click', function(event) { if (event.target == getModal(paperReferences[i])) { hideModal(paperReferences[i]); }});
     }
+}
+
+// NOT USED
+
+// fill modal with information
+function populateModal(paperReference) {
+    // get selected modal
+    let modal = getModal(paperReference);
+    // get modal text element
+    let modalText = modal.querySelector("div.modal-content div.modal-content-body");
+    // get bib file contents
+    let content = paperReference;
+    // write contents
+    modalText.innerHTML = content;
 }
