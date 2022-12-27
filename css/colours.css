@@ -10,8 +10,6 @@
     --white-le: rgba(255,255,255,0.38);
     
     /* shades of gray #121212 */
-    --dark-gray-transparent: rgba(18,18,18,0.4);
-
     --gray-p: #121212;
 
     --gray-99: hsl(0deg 0% 99%);
@@ -26,6 +24,9 @@
     --gray-20: hsl(0deg 0% 20%);
     --gray-15: hsl(0deg 0% 15%);
     --gray-10: hsl(0deg 0% 10%);
+
+    --gray-90-transparent: rgba(242,242,242,0.7);
+    --gray-7-transparent: rgba(18,18,18,0.7);
 
     /* shades of blue #0080ff */
     --blue-p: #0080FF;

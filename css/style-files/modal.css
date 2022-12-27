@@ -3,7 +3,7 @@
 
 /* modal background */
 div.modal {
-    background-color: var(--dark-gray-transparent); /* Black w/ opacity */
+    background-color: var(--scrim-color); /* Black w/ opacity */
     display: none; /* hidden by default */
     height: 100%; /* full height */
     left: 0;

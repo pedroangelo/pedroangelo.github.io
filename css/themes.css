@@ -26,6 +26,8 @@ body.default-theme, body.light-theme {
     --shadow-color-l1: var(--gray-70);
     --shadow-color-l2: var(--gray-60);
     --shadow-color-l3: var(--gray-50);
+
+    --scrim-color: var(--gray-90-transparent);
 }
 
 body.dark-theme {
@@ -47,6 +49,8 @@ body.dark-theme {
     --shadow-color-l1: var(--gray-p);
     --shadow-color-l2: var(--gray-p);
     --shadow-color-l3: var(--gray-p);
+
+    --scrim-color: var(--gray-7-transparent);
 }
 
 @media (prefers-color-scheme: light) {
@@ -69,6 +73,8 @@ body.default-theme, body.light-theme {
     --shadow-color-l1: var(--gray-70);
     --shadow-color-l2: var(--gray-60);
     --shadow-color-l3: var(--gray-50);
+
+    --scrim-color: var(--gray-90-transparent);
 }
 
 body.dark-theme {
@@ -90,6 +96,8 @@ body.dark-theme {
     --shadow-color-l1: var(--gray-p);
     --shadow-color-l2: var(--gray-p);
     --shadow-color-l3: var(--gray-p);
+
+    --scrim-color: var(--gray-7-transparent);
 }
 }
 
@@ -113,6 +121,8 @@ body.light-theme {
     --shadow-color-l1: var(--gray-70);
     --shadow-color-l2: var(--gray-60);
     --shadow-color-l3: var(--gray-50);
+
+    --scrim-color: var(--gray-90-transparent);
 }
 
 body.default-theme, body.dark-theme {
@@ -134,5 +144,7 @@ body.default-theme, body.dark-theme {
     --shadow-color-l1: var(--gray-p);
     --shadow-color-l2: var(--gray-p);
     --shadow-color-l3: var(--gray-p);
+
+    --scrim-color: var(--gray-7-transparent);
 }
 }
