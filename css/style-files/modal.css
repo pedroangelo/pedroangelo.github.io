@@ -3,7 +3,8 @@
 
 /* modal background */
 div.modal {
-    background-color: var(--scrim-color); /* Black w/ opacity */
+    backdrop-filter: blur(1px); /* blurred backdrop */
+    background-color: var(--scrim-color); /* black w/ opacity */
     display: none; /* hidden by default */
     height: 100%; /* full height */
     left: 0;
