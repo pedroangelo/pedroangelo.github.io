@@ -11,28 +11,36 @@
     color: var(--text-color-me);
     cursor: pointer; /* change pointer */
     font-size: 16px;
-    /* margin: 0px 2px 0px 0px; */
     padding: 10px 16px 10px 12px;
     text-align: left;
     text-decoration: none; /* remove underline usual in links */
+    vertical-align: top;
+}
+
+/* paper entry iteration buttons on hover */
+.paper-entry div.paper-iteration a:hover,
+.paper-entry div.paper-iteration button:hover {
+    background-color: var(--elevation-color-l2);
+    color: var(--text-color-he);
 }
 
 /* paper entry iteration button icon */
-.paper-entry div.paper-iteration a span,
-.paper-entry div.paper-iteration button span {
+.paper-entry div.paper-iteration a span:nth-of-type(1),
+.paper-entry div.paper-iteration button span:nth-of-type(1) {
     float: left;
     font-size: 20px;
     margin: 0px 8px 0px 0px;
 }
 
+/* paper entry iteration button text */
+.paper-entry div.paper-iteration a span:nth-of-type(2),
+.paper-entry div.paper-iteration button span:nth-of-type(2) {
+    float: left;
+    font-size: 16px;
+    text-align: left;
+}
+
 /* google material icon definitions */
 .paper-entry div.paper-iteration .material-symbols-outlined {
     font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 24;
-}
-
-/* paper entry iteration buttons */
-.paper-entry div.paper-iteration a:hover,
-.paper-entry div.paper-iteration button:hover {
-    background-color: var(--elevation-color-l2);
-    color: var(--text-color-he);
 }
