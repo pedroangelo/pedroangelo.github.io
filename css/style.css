@@ -10,6 +10,11 @@
 /* modal for .bib and abstract */
 @import "/css/style-files/modal.css";
 
+/* PAGES STYLE */
+
+/* about-me page */
+@import "/css/style-files/about-me.css";
+
 /* page style */
 
 body {
@@ -20,7 +25,7 @@ body {
 }
 
 main {
-  margin: 40px;
+  margin: 40px 7%;
 }
 
 /* link yet to be visited */

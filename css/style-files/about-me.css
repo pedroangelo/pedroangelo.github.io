@@ -1,0 +1,34 @@
+@import "/css/themes.css";
+@import "/css/global-definitions.css";
+
+main section {
+    background-color: var(--elevation-color-l1);
+    display: block;
+    margin: 20px 0px;
+    padding: 10px;
+}
+
+/* short bio section */
+section#short-bio {
+    display: flex;
+}
+
+section#short-bio div {
+    padding: 10px;
+}
+
+section#short-bio div:nth-of-type(1) {
+    text-align: center;
+    width: 33%;
+}
+
+section#short-bio div:nth-of-type(2) {
+    text-align: justify;
+    width: 67%;
+}
+
+section#short-bio div:nth-of-type(1) img {
+    border: 3px solid var(--highlight-color-p);
+    border-radius: 50%;
+    width: 70%;
+}
