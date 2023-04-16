@@ -8,8 +8,22 @@ async function includeComponent(target, path) {
     document.querySelector(target).insertAdjacentHTML("afterbegin", html);
 }
 
+function activateNavbarButton() {
+    // get page url
+    var pageUrl = window.location.href;
+    // get path from root to pages
+    var pageUrlComponents = pageUrl.split('/');
+    pageUrlComponents.pop();
+    // remove elements until pages
+    pageUrlComponents.splice(0, pageUrlComponents.indexOf("pages"));
+    var activeUrl = ["/"].concat(pageUrlComponents.join('/')).join('');
+    // change class to active
+    document.querySelector("header nav.navbar").querySelector("a[href='" + activeUrl + "']").classList.add("active");
+}
+
 // add header from file
 async function includeHeader() {
     await includeComponent("header", "/resources/components/header.html");
+    activateNavbarButton();
     initializeTheme();
 };
