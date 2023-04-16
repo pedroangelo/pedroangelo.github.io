@@ -10,6 +10,7 @@
 
 <!-- import Javascript files -->
 <script src="/javascript/theme-picker.js"></script>
+<script src="/javascript/include-component.js"></script>
 
 <title>Teaching</title>
 </head>
@@ -17,6 +18,8 @@
 <body class="default-theme">
 
 <header>
+<!-- populated with javascript method includeHeader -->
+<!--
 <div class="inner-header">
 
 <a href="/" id="header-logo">Pedro Ângelo</a>
@@ -28,9 +31,9 @@
 <a href="/pages/about-me/curriculum-vitae">curriculum vitae</a>
 </nav>
 </div>
+<a href="/pages/contact">contact</a>
 <a href="/pages/research">research</a>
 <a href="/pages/teaching" class="active">teaching</a>
-<a href="/pages/contact">contact</a>
 </nav>
 
 <div id="theme-picker">
@@ -54,6 +57,7 @@ dark
 </div>
 
 </div>
+-->
 </header>
 
 <main>
@@ -131,9 +135,7 @@ Faculdade de Engenharia da Universidade do Porto.
 </ul>
 <script>
 // initialization scripts
-
-// initialize theme
-initializeTheme();
+includeHeader();
 </script>
 </body>
 </html>

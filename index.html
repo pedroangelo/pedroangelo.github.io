@@ -10,7 +10,7 @@
 
 <!-- import Javascript files -->
 <script src="/javascript/theme-picker.js"></script>
-<script src="/javascript/add-html-content.js"></script>
+<script src="/javascript/include-component.js"></script>
 
 <title>Pedro Ângelo</title>
 </head>
@@ -18,6 +18,46 @@
 <body class="default-theme">
 
 <header>
+<!-- populated with javascript method includeHeader -->
+<!--
+<div class="inner-header">
+
+<a href="/" id="header-logo">Pedro Ângelo</a>
+
+<nav class="navbar">
+<div class="dropdown">
+<a href="/pages/about-me">about me</a>
+<nav class="dropdown-content">
+<a href="/pages/about-me/curriculum-vitae">curriculum vitae</a>
+</nav>
+</div>
+<a href="/pages/contact">contact</a>
+<a href="/pages/research">research</a>
+<a href="/pages/teaching">teaching</a>
+</nav>
+
+<div id="theme-picker">
+<button class="theme-button">
+<span class="theme-icon material-symbols-outlined">brightness_6</span>
+</button>
+<div class="theme-options">
+<button class="pick-theme pick-default" onclick="switchToTheme('default')">
+<span class="theme-icon material-symbols-outlined">brightness_6</span>
+default
+</button>
+<button class="pick-theme pick-light" onclick="switchToTheme('light')">
+<span class="theme-icon material-symbols-outlined">brightness_high</span>
+light
+</button>
+<button class="pick-theme pick-dark" onclick="switchToTheme('dark')">
+<span class="theme-icon material-symbols-outlined">brightness_4</span>
+dark
+</button>
+</div>
+</div>
+
+</div>
+-->
 </header>
   
 <main>
@@ -25,7 +65,7 @@
 </main>
 <script>
 // initialization scripts
-addHeader();
+includeHeader();
 </script>
 </body>
 </html>

@@ -10,6 +10,7 @@
 
 <!-- import Javascript files -->
 <script src="/javascript/theme-picker.js"></script>
+<script src="/javascript/include-component.js"></script>
 
 <title>Contact</title>
 </head>
@@ -17,6 +18,8 @@
 <body class="default-theme">
 
 <header>
+<!-- populated with javascript method includeHeader -->
+<!--
 <div class="inner-header">
 
 <a href="/" id="header-logo">Pedro Ângelo</a>
@@ -28,9 +31,9 @@
 <a href="/pages/about-me/curriculum-vitae">curriculum vitae</a>
 </nav>
 </div>
+<a href="/pages/contact" class="active">contact</a>
 <a href="/pages/research">research</a>
 <a href="/pages/teaching">teaching</a>
-<a href="/pages/contact" class="active">contact</a>
 </nav>
 
 <div id="theme-picker">
@@ -54,15 +57,14 @@ dark
 </div>
 
 </div>
+-->
 </header>
 
 <main>
 </main>
 <script>
 // initialization scripts
-
-// initialize theme
-initializeTheme();
+includeHeader();
 </script>
 </body>
 </html>
